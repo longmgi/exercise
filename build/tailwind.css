@@ -602,7 +602,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* dropdown menu  */
 .mgi_nav__menu__dropdown {
   display: none;
-  min-width: 200px;
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
   color: #ffff;
@@ -614,8 +613,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: auto;
   display: block;
 }
-.mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list {
+.mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list, .mgi_nav__menu__dropdown__list--sub li {
   position: relative;
+  min-width: 200px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 15px;
@@ -632,7 +632,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* Submenu */
 .mgi_nav__menu__dropdown__submenu {
   display: none;
-  min-width: 200px;
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
   color: #ffff;
@@ -643,6 +642,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 100%;
   z-index: auto;
   display: block;
+}
+/* Mega menu */
+.mgi_nav__menu__list:hover .mgi_nav__menu__dropdown.-mega-grid {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 1.25rem;
+  padding-bottom: 15px;
+}
+.mgi_nav__menu__dropdown__list--title {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 800;
 }
 /* button */
 .mgi_button {
