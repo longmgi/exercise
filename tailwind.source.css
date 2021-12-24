@@ -89,8 +89,14 @@
     .mgi_nav__menu__list:hover .mgi_nav__menu__dropdown.-mega-grid{
         @apply absolute top-full left-0 flex flex-row px-2.5 pt-5 pb-[15px];
     }
+    .mgi_nav__menu__list:hover .mgi_nav__menu__dropdown.-mega-grid.-full{
+        @apply grid grid-cols-4 top-full !left-0 !right-0 container mx-auto;
+    }
     .mgi_nav__menu__dropdown__list--title{
         @apply px-[15px] pt-[5px] pb-[15px] font-extrabold block text-sm;
+    }
+    .mgi_nav__menu__dropdown__list--sub .mgi_menu--icon{
+        @apply pr-2.5;
     }
     /* button */
     .mgi_button{
