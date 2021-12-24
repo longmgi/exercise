@@ -195,10 +195,10 @@
         @apply flex flex-row pb-[10px] gap-x-[25px];
     }
     .mgi_slice__animation.-feedback{
-        animation: slice2 28s infinite 2s forwards;
+        animation: slice2 20s ease-out infinite 2s forwards;
     }
     .mgi_slice__animation.-news{
-        animation: slice 28s infinite 2s forwards;
+        animation: slice 20s ease-out infinite 2s forwards;
     }
     @keyframes slice2{
         0% {

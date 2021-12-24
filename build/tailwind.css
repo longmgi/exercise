@@ -853,12 +853,12 @@ footer h5 {
   padding-bottom: 10px;
 }
 .mgi_slice__animation.-feedback{
-        -webkit-animation: slice2 28s infinite 2s forwards;
-                animation: slice2 28s infinite 2s forwards;
+        -webkit-animation: slice2 20s ease-out infinite 2s forwards;
+                animation: slice2 20s ease-out infinite 2s forwards;
     }
 .mgi_slice__animation.-news{
-        -webkit-animation: slice 28s infinite 2s forwards;
-                animation: slice 28s infinite 2s forwards;
+        -webkit-animation: slice 20s ease-out infinite 2s forwards;
+                animation: slice 20s ease-out infinite 2s forwards;
     }
 @-webkit-keyframes slice2{
         0% {
