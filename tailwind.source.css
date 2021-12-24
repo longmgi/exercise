@@ -35,17 +35,12 @@
 }
 @layer components{
     .mgi_container{
-        @apply container mx-auto px-[15px] overflow-hidden;
+        @apply container mx-auto px-[15px];
     }
+    /* Nav menu */
     .mgi_nav{
-        @apply flex h-20 text-xs font-semibold uppercase text-[#fff];
+        @apply flex text-xs font-semibold uppercase text-[#fff];
         font-family: "Poppins", sans-serif;
-    }
-    .mgi_nav__logo{
-        @apply px-[15px];
-    }
-    .mgi_nav__menu{
-        @apply hidden desktop:flex desktop:flex-row;
     }
     .mgi_nav--desktop{
         @apply flex flex-row;
@@ -53,12 +48,45 @@
     .mgi_nav--mobile{
         @apply desktop:hidden;
     }
-    .mgi_nav__menu__list{
-        @apply px-[15px];
-    }
     .mgi_nav_button.-icon li{
+        @apply h-20 leading-[80px] px-[15px];
+    }
+    .mgi_nav__logo{
         @apply px-[15px];
     }
+    .mgi_nav__menu{
+        @apply hidden desktop:flex desktop:flex-row;
+    }
+    .mgi_nav__menu__list{
+        @apply relative;
+    }
+    .mgi_nav__menu__list a.mgi_nav__menu__list--link{
+        @apply block h-20 px-[15px] leading-[80px];
+    }
+    /* dropdown menu  */
+    .mgi_nav__menu__dropdown{
+        @apply hidden bg-neutrals-menu text-[#ffff] min-w-[200px];
+    }
+    .mgi_nav__menu__list:hover .mgi_nav__menu__dropdown{
+        @apply block absolute top-full left-0 z-auto;
+    }
+    .mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list{
+        @apply py-3 px-[15px] relative;
+    }
+    .mgi_nav__menu__dropdown__list.-haschild::after{
+        font-family: FontAwesome;
+        content: '\f054';
+        @apply font-normal absolute top-1/3 right-4;
+    }
+    /* Submenu */
+    .mgi_nav__menu__dropdown__submenu{
+        @apply hidden bg-neutrals-menu text-[#ffff] min-w-[200px];
+    }
+    .mgi_nav__menu__dropdown__list:hover .mgi_nav__menu__dropdown__submenu{
+        @apply block absolute top-0 left-full z-auto;
+    }
+   
+    /* button */
     .mgi_button{
         @apply min-w-min block px-[35px] text-base font-semibold py-3 text-[#fff] uppercase bg-primary hover:bg-neutrals-darkest rounded-full duration-300;
     }
@@ -173,6 +201,18 @@
         @apply px-[10px];
     }
     
+    .mgi_input__wrap{
+        @apply flex flex-row;
+    }
+    .mgi_input--icon{
+        @apply bg-primary py-1.5 px-3.5;
+    }
+    .mgi_contact{
+        @apply flex flex-row pb-[10px] gap-x-[25px];
+    }
+    .mgi_slide{
+        @apply overflow-hidden;
+    }
     .mgi_slide__wrap{
         @apply grid grid-flow-col mx-[-15px] gap-x-[30px];
     }
@@ -185,20 +225,11 @@
     .mgi_slide__item.-center{
         @apply text-center;
     }
-    .mgi_input__wrap{
-        @apply flex flex-row;
-    }
-    .mgi_input--icon{
-        @apply bg-primary py-1.5 px-3.5;
-    }
-    .mgi_contact{
-        @apply flex flex-row pb-[10px] gap-x-[25px];
-    }
     .mgi_slice__animation.-feedback{
-        animation: slice2 20s ease-out infinite 2s forwards;
+        animation: slice2 20s ease-out infinite 2s backwards;
     }
     .mgi_slice__animation.-news{
-        animation: slice 20s ease-out infinite 2s forwards;
+        animation: slice 20s ease-out infinite 2s backwards;
     }
     @keyframes slice2{
         0% {

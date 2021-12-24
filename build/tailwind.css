@@ -542,13 +542,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mgi_container {
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
   padding-left: 15px;
   padding-right: 15px;
 }
+/* Nav menu */
 .mgi_nav {
   display: flex;
-  height: 5rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
@@ -556,6 +555,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
         font-family: "Poppins", sans-serif;
+}
+.mgi_nav--desktop {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 1335px) {
+
+  .mgi_nav--mobile {
+    display: none;
+  }
+}
+.mgi_nav_button.-icon li {
+  height: 5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 80px;
 }
 .mgi_nav__logo {
   padding-left: 15px;
@@ -574,24 +589,62 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 }
-.mgi_nav--desktop {
-  display: flex;
-  flex-direction: row;
-}
-@media (min-width: 1335px) {
-
-  .mgi_nav--mobile {
-    display: none;
-  }
-}
 .mgi_nav__menu__list {
+  position: relative;
+}
+.mgi_nav__menu__list a.mgi_nav__menu__list--link {
+  display: block;
+  height: 5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 80px;
+}
+/* dropdown menu  */
+.mgi_nav__menu__dropdown {
+  display: none;
+  min-width: 200px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+  color: #ffff;
+}
+.mgi_nav__menu__list:hover .mgi_nav__menu__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: auto;
+  display: block;
+}
+.mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   padding-left: 15px;
   padding-right: 15px;
 }
-.mgi_nav_button.-icon li {
-  padding-left: 15px;
-  padding-right: 15px;
+.mgi_nav__menu__dropdown__list.-haschild::after{
+        font-family: FontAwesome;
+        content: '\f054';
+        position: absolute;
+        top: 33.333333%;
+        right: 1rem;
+        font-weight: 400;
+    }
+/* Submenu */
+.mgi_nav__menu__dropdown__submenu {
+  display: none;
+  min-width: 200px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+  color: #ffff;
 }
+.mgi_nav__menu__dropdown__list:hover .mgi_nav__menu__dropdown__submenu {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  z-index: auto;
+  display: block;
+}
+/* button */
 .mgi_button {
   display: block;
   min-width: -webkit-min-content;
@@ -816,23 +869,6 @@ footer h5 {
   padding-left: 10px;
   padding-right: 10px;
 }
-.mgi_slide__wrap {
-  margin-left: -15px;
-  margin-right: -15px;
-  display: grid;
-  grid-auto-flow: column;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-}
-/* .mgi_slide__item{
-        @apply snap-always snap-start;
-    } */
-.mgi_slide__item__thumb {
-  padding-bottom: 1.25rem;
-}
-.mgi_slide__item.-center {
-  text-align: center;
-}
 .mgi_input__wrap {
   display: flex;
   flex-direction: row;
@@ -852,13 +888,33 @@ footer h5 {
        column-gap: 25px;
   padding-bottom: 10px;
 }
+.mgi_slide {
+  overflow: hidden;
+}
+.mgi_slide__wrap {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+/* .mgi_slide__item{
+        @apply snap-always snap-start;
+    } */
+.mgi_slide__item__thumb {
+  padding-bottom: 1.25rem;
+}
+.mgi_slide__item.-center {
+  text-align: center;
+}
 .mgi_slice__animation.-feedback{
-        -webkit-animation: slice2 20s ease-out infinite 2s forwards;
-                animation: slice2 20s ease-out infinite 2s forwards;
+        -webkit-animation: slice2 20s ease-out infinite 2s backwards;
+                animation: slice2 20s ease-out infinite 2s backwards;
     }
 .mgi_slice__animation.-news{
-        -webkit-animation: slice 20s ease-out infinite 2s forwards;
-                animation: slice 20s ease-out infinite 2s forwards;
+        -webkit-animation: slice 20s ease-out infinite 2s backwards;
+                animation: slice 20s ease-out infinite 2s backwards;
     }
 @-webkit-keyframes slice2{
         0% {
@@ -943,6 +999,9 @@ footer h5 {
 }
 .left-0 {
   left: 0px;
+}
+.z-10 {
+  z-index: 10;
 }
 .mx-auto {
   margin-left: auto;

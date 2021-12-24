@@ -16,7 +16,7 @@
     
     <main>
         <section id="banner" style="background-image: url('./images/9.jpg');" class="bg-cover bg-center bg-no-repeat pt-[50px] bg-fixed relative">
-            <header class="absolute top-0 left-0 w-full"> 
+            <header class="absolute top-0 left-0 w-full z-10"> 
                 <nav class="sticky">
                     <div class="mgi_nav mgi_container desktop:justify-between mx-auto">
                         <div class="mgi_nav--mobile self-center">
@@ -28,28 +28,119 @@
                         <div class="mgi_nav--desktop flex-grow justify-end self-center">
                             <ul class="mgi_nav__menu">
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Home</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Home</a>
+                                    <ul class="mgi_nav__menu__dropdown">
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Corporate</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Corporate Layout 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Corporate Layout 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Corporate Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Agency</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Agency Layout 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Agency Layout 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Agency Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Portfolio</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Portfolio Layout 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Portfolio Layout 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Portfolio Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Landing Page</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Landing Page 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Landing Page 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Landing Page 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Shop</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Shop Layout 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Shop Layout 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Shop Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Blog</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Blog Layout 1</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Blog Layout 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Blog Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home One Page</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">One Page Agency</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">One Page Corporate</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">One Page Portfolio</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">One Page App</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">One Page Industry</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Industries</a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Industries</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Industries 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Industries 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list -haschild">
+                                            <a href="#">Home Business<span class="item-new1 blink_me">New</span></a>
+                                            <ul class="mgi_nav__menu__dropdown__submenu">
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Business</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Business 2</a></li>
+                                                <li class="mgi_nav__menu__dropdown__submenu__list"><a href="#">Home Business 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list">
+                                            <a href="index-flat.php">Home Flat Design</a>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list">
+                                            <a href="index-material.php">Home Material Design</a>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list">
+                                            <a href="index-app.php">Home App</a>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list">
+                                            <a href="index-events.php">Home Events</a>
+                                        </li>
+                                        <li class="mgi_nav__menu__dropdown__list">
+                                            <a href="index-freelancer.php">Home Freelancer</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Header</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Header</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Pages</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Pages</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Features</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Features</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Portfolio</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Portfolio</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Blog</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Blog</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Shop</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Shop</a>
                                 </li>
                                 <li class="mgi_nav__menu__list">
-                                    <a href="#">Elements</a>
+                                    <a href="#" class="mgi_nav__menu__list--link">Elements</a>
                                 </li>
                             </ul>
                             <div class="mgi_nav__button">
@@ -242,76 +333,77 @@
         <section id="client" >
             <div class="mgi_container py-20">
                 <h3 class="text-center pb-[50px] mgi_hr">What Clients Says?</h3>
-                
-                <div class="mgi_feedback mgi_slide__wrap mgi_slice__animation -feedback auto-cols-[353.333px] gap-x-10 mb-[60px]">
-                    <div class="mgi_feedback__item">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <h6 class="mgi_feedback__item_title mt-5">
-                            Michael Y
-                        </h6>
-                        <span class="mgi_feedback__item__bio">Google</span>
+                <div class="mgi_slide">
+                    <div class="mgi_feedback mgi_slide__wrap mgi_slice__animation -feedback auto-cols-[353.333px] gap-x-10 mb-[60px]">
+                        <div class="mgi_feedback__item">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h6 class="mgi_feedback__item_title mt-5">
+                                Michael Y
+                            </h6>
+                            <span class="mgi_feedback__item__bio">Google</span>
+                        </div>
+                        <div class="mgi_feedback__item">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h6 class="mgi_feedback__item_title mt-5">
+                                Rachel Moore
+                            </h6>
+                            <span class="mgi_feedback__item__bio">Yahoo</span>
+                        </div>
+                        <div class="mgi_feedback__item">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h6 class="mgi_feedback__item_title mt-5">
+                                Sue San
+                            </h6>
+                            <span class="mgi_feedback__item__bio">Bing</span>
+                        </div>
+                        <div class="mgi_feedback__item">
+                            <p>
+                                wwwwwDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h6 class="mgi_feedback__item_title mt-5">
+                                John Deo
+                            </h6>
+                            <span class="mgi_feedback__item__bio">Yahoo</span>
+                        </div>
+                        <div class="mgi_feedback__item">
+                            <p>
+                                testDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <h6 class="mgi_feedback__item_title mt-5">
+                                Sue San
+                            </h6>
+                            <span class="mgi_feedback__item__bio">Bing</span>
+                        </div>
                     </div>
-                    <div class="mgi_feedback__item">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <h6 class="mgi_feedback__item_title mt-5">
-                            Rachel Moore
-                        </h6>
-                        <span class="mgi_feedback__item__bio">Yahoo</span>
-                    </div>
-                    <div class="mgi_feedback__item">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <h6 class="mgi_feedback__item_title mt-5">
-                            Sue San
-                        </h6>
-                        <span class="mgi_feedback__item__bio">Bing</span>
-                    </div>
-                    <div class="mgi_feedback__item">
-                        <p>
-                            wwwwwDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <h6 class="mgi_feedback__item_title mt-5">
-                            John Deo
-                        </h6>
-                        <span class="mgi_feedback__item__bio">Yahoo</span>
-                    </div>
-                    <div class="mgi_feedback__item">
-                        <p>
-                            testDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <h6 class="mgi_feedback__item_title mt-5">
-                            Sue San
-                        </h6>
-                        <span class="mgi_feedback__item__bio">Bing</span>
-                    </div>
-                </div>
-                <div class="mgi_slide--logo">
-                    <div class="mgi_grid--7 justify-between">
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client1.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client2.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client3.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client4.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client5.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client6.png" alt="">
-                        </div>
-                        <div class="mgi_clientlogo__item mgi_grid__col">
-                            <img src="./images/clients/client7.png" alt="">
+                    <div class="mgi_slide--logo">
+                        <div class="mgi_grid--7 justify-between">
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client1.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client2.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client3.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client4.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client5.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client6.png" alt="">
+                            </div>
+                            <div class="mgi_clientlogo__item mgi_grid__col">
+                                <img src="./images/clients/client7.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>

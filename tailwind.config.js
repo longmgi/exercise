@@ -10,6 +10,7 @@ module.exports = {
     {
       primary:'#3498db',
       neutrals: {
+        menu:'#242424',
         darkest:'#171717',
         darker:'#222',
         DEFAULT:'#434955',
