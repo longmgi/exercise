@@ -600,7 +600,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 80px;
 }
 /* dropdown menu  */
-.mgi_nav__menu__dropdown {
+.mgi_nav__menu__dropdown, .mgi_nav__menu__dropdown__submenu__sub2 {
   display: none;
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
@@ -613,7 +613,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: auto;
   display: block;
 }
-.mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list, .mgi_nav__menu__dropdown__list--sub li {
+.mgi_nav__menu__dropdown__submenu__list:hover .mgi_nav__menu__dropdown__submenu__sub2 {
+  position: absolute;
+  top: 0px;
+  right: 100%;
+  z-index: auto;
+  display: block;
+}
+.mgi_nav__menu__dropdown__list, .mgi_nav__menu__dropdown__submenu__list, .mgi_nav__menu__dropdown__list--sub li, .mgi_nav__menu__dropdown__submenu__sub2__list {
   position: relative;
   min-width: 200px;
   padding-top: 0.75rem;
@@ -621,7 +628,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 15px;
   padding-right: 15px;
 }
-.mgi_nav__menu__dropdown__list.-haschild::after{
+.mgi_nav__menu__dropdown__list.-haschild::after, .mgi_nav__menu__dropdown__submenu__list.-haschild::after{
         font-family: FontAwesome;
         content: '\f054';
         position: absolute;
