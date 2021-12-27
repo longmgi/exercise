@@ -103,7 +103,7 @@
     }
     /* button */
     .mgi_button{
-        @apply min-w-min block px-[35px] text-base font-semibold py-3 text-[#fff] uppercase bg-primary hover:bg-neutrals-darkest rounded-full duration-300;
+        @apply min-w-min block px-[37px] text-base font-semibold py-3 text-[#fff] uppercase bg-primary hover:bg-neutrals-darkest rounded-full duration-300;
     }
     .mgi_button--footer{
         @apply min-w-min block px-[24px] text-sm font-normal py-2.5 text-[#fff] uppercase bg-primary hover:bg-[#333] duration-300;
@@ -117,16 +117,9 @@
     .mgi_button.-black
     {
         @apply bg-neutrals-darkest hover:bg-[#fff] hover:text-[#333];
-    } 
-    .mgi_banner__control{
-        @apply w-full text-center absolute bottom-0;
     }
-    .mgi_banner__dots{
-        @apply mx-auto py-3;
-    }
-    .mgi_banner__dots__dot span{
-        @apply inline-block w-[10px] h-[10px] rounded-full bg-[#fff] opacity-75 m-[5px];
-    }
+    
+    /* Mgi grid */
     .mgi_grid--1{
         @apply grid grid-cols-1 mx-[-15px];
     }
@@ -224,6 +217,36 @@
     }
     .mgi_contact{
         @apply flex flex-row pb-[10px] gap-x-[25px];
+    }
+    /* Slide */
+    .mgi_banner__dots{
+        @apply mx-auto py-3 absolute bottom-3.5 left-1/2 -translate-x-1/2;
+    }
+
+    .mgi_banner__dots__dot span{
+        @apply block w-[10px] h-[10px] leading-[10px] rounded-full bg-[#fff] cursor-pointer;
+    }
+    .mgi_banner__dots__dot:not(.-active) span{
+        @apply opacity-60 hover:outline hover:outline-[#fff] hover:outline-offset-[5px] hover:outline-2  hover:opacity-100;
+    }
+    .mgi_banner__dots__dot.-active{
+        @apply rounded-full outline outline-[#fff] outline-offset-[5px] outline-2;
+    }
+    .mgi_banner__arrow{
+        @apply text-xs text-[#ffff] w-[50px] h-[50px] text-center leading-[50px] bg-primary rounded-full transition-all duration-300;
+    }
+    
+    .mgi_banner__arrow.-left{
+        @apply absolute top-1/2 left-0 invisible opacity-0;
+    }
+    .mgi_banner__arrow.-right{
+        @apply absolute top-1/2 right-0 invisible opacity-0;
+    }
+    .mgi_banner__slides:hover .mgi_banner__arrow.-left{
+        @apply absolute top-1/2 left-5 visible cursor-pointer opacity-75 z-10;
+    }
+    .mgi_banner__slides:hover .mgi_banner__arrow.-right{
+        @apply absolute top-1/2 right-5 visible cursor-pointer opacity-75 z-10;
     }
     .mgi_slide{
         @apply overflow-hidden;

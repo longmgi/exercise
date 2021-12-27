@@ -464,6 +464,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 *, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-scroll-snap-strictness: proximity;
   border-color: currentColor;
 }
@@ -729,8 +737,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(52 152 219 / var(--tw-bg-opacity));
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 37px;
+  padding-right: 37px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
@@ -785,28 +793,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
 }
-.mgi_banner__control {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
-}
-.mgi_banner__dots {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-.mgi_banner__dots__dot span {
-  margin: 5px;
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  opacity: 0.75;
-}
+/* Mgi grid */
 .mgi_grid--1 {
   margin-left: -15px;
   margin-right: -15px;
@@ -964,6 +951,91 @@ footer h5 {
        column-gap: 25px;
   padding-bottom: 10px;
 }
+/* Slide */
+.mgi_banner__dots {
+  position: absolute;
+  bottom: 0.875rem;
+  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  --tw-translate-x: -50%;
+  transform: var(--tw-transform);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.mgi_banner__dots__dot span {
+  display: block;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  line-height: 10px;
+}
+.mgi_banner__dots__dot:not(.-active) span {
+  opacity: 0.6;
+}
+.mgi_banner__dots__dot:not(.-active) span:hover {
+  opacity: 1;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 5px;
+  outline-color: #fff;
+}
+.mgi_banner__dots__dot.-active {
+  border-radius: 9999px;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 5px;
+  outline-color: #fff;
+}
+.mgi_banner__arrow {
+  height: 50px;
+  width: 50px;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 152 219 / var(--tw-bg-opacity));
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 50px;
+  color: #ffff;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.mgi_banner__arrow.-left {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  opacity: 0;
+}
+.mgi_banner__arrow.-right {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  opacity: 0;
+}
+.mgi_banner__slides:hover .mgi_banner__arrow.-left {
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.mgi_banner__slides:hover .mgi_banner__arrow.-right {
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0.75;
+}
 .mgi_slide {
   overflow: hidden;
 }
@@ -1086,9 +1158,11 @@ footer h5 {
   margin-left: auto;
   margin-right: auto;
 }
-.my-\[7px\] {
+.mt-\[7px\] {
   margin-top: 7px;
-  margin-bottom: 7px;
+}
+.mb-8 {
+  margin-bottom: 2rem;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
@@ -1163,11 +1237,14 @@ footer h5 {
 .justify-items-center {
   justify-items: center;
 }
-.gap-3 {
-  gap: 0.75rem;
+.gap-6 {
+  gap: 1.5rem;
 }
 .gap-\[30px\] {
   gap: 30px;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .gap-x-\[30px\] {
   -moz-column-gap: 30px;
