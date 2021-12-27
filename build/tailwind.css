@@ -1042,10 +1042,16 @@ footer h5 {
   cursor: pointer;
   opacity: 0.75;
 }
-.mgi_slide {
+.mgi_slides {
+  position: relative;
+}
+.mgi_slides__wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   overflow: hidden;
 }
-.mgi_slide__wrap {
+.mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project {
   margin-left: -15px;
   margin-right: -15px;
   display: grid;
@@ -1053,24 +1059,53 @@ footer h5 {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+.mgi_slides__arrow {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 50px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.mgi_slides__arrow.-left {
+  position: absolute;
+  top: 50%;
+  left: -5rem;
+}
+.mgi_slides__arrow.-left:hover {
+  --tw-text-opacity: 1;
+  color: rgb(52 152 219 / var(--tw-text-opacity));
+}
+.mgi_slides__arrow.-right {
+  position: absolute;
+  top: 50%;
+  right: -5rem;
+}
+.mgi_slides__arrow.-right:hover {
+  --tw-text-opacity: 1;
+  color: rgb(52 152 219 / var(--tw-text-opacity));
+}
 /* .mgi_slide__item{
         @apply snap-always snap-start;
     } */
-.mgi_slide__item__thumb {
+.mgi_slides__item__thumb {
   padding-bottom: 1.25rem;
 }
-.mgi_slide__item.-center {
+.mgi_slides__item.-center {
   text-align: center;
 }
-.mgi_slice__animation.-feedback{
-        -webkit-animation: slice2 20s ease-out infinite 2s backwards;
-                animation: slice2 20s ease-out infinite 2s backwards;
+.mgi_slides__animation.-feedback{
+        -webkit-animation: slide2 20s ease-out infinite 2s backwards;
+                animation: slide2 20s ease-out infinite 2s backwards;
     }
-.mgi_slice__animation.-news{
-        -webkit-animation: slice 20s ease-out infinite 2s backwards;
-                animation: slice 20s ease-out infinite 2s backwards;
+.mgi_slides__animation.-news{
+        -webkit-animation: slide 20s ease-out infinite 2s backwards;
+                animation: slide 20s ease-out infinite 2s backwards;
     }
-@-webkit-keyframes slice2{
+@-webkit-keyframes slide2{
         0% {
             margin-left: 0px;
         }
@@ -1087,7 +1122,7 @@ footer h5 {
             margin-left: 0px;
         }
     }
-@keyframes slice2{
+@keyframes slide2{
         0% {
             margin-left: 0px;
         }
@@ -1104,7 +1139,7 @@ footer h5 {
             margin-left: 0px;
         }
     }
-@-webkit-keyframes slice{
+@-webkit-keyframes slide{
         0% {
             margin-left: 0px;
         }
@@ -1121,7 +1156,7 @@ footer h5 {
             margin-left: 0px;
         }
     }
-@keyframes slice{
+@keyframes slide{
         0% {
             margin-left: 0px;
         }

@@ -248,28 +248,40 @@
     .mgi_banner__slides:hover .mgi_banner__arrow.-right{
         @apply absolute top-1/2 right-5 visible cursor-pointer opacity-75 z-10;
     }
-    .mgi_slide{
-        @apply overflow-hidden;
+    .mgi_slides{
+        @apply relative;
     }
-    .mgi_slide__wrap{
+    .mgi_slides__wrap{
+        @apply mx-auto w-full overflow-hidden;
+    }
+    .mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project{
         @apply grid grid-flow-col mx-[-15px] gap-x-[30px];
+    }
+    .mgi_slides__arrow{
+        @apply text-xl w-[50px] h-[50px] text-center leading-[50px] transition-all duration-300 cursor-pointer;
+    }
+    .mgi_slides__arrow.-left{
+        @apply absolute top-1/2 -left-20 hover:text-primary;
+    }
+    .mgi_slides__arrow.-right{
+        @apply absolute top-1/2 -right-20 hover:text-primary;
     }
     /* .mgi_slide__item{
         @apply snap-always snap-start;
     } */
-    .mgi_slide__item__thumb{
+    .mgi_slides__item__thumb{
         @apply pb-5;
     }
-    .mgi_slide__item.-center{
+    .mgi_slides__item.-center{
         @apply text-center;
     }
-    .mgi_slice__animation.-feedback{
-        animation: slice2 20s ease-out infinite 2s backwards;
+    .mgi_slides__animation.-feedback{
+        animation: slide2 20s ease-out infinite 2s backwards;
     }
-    .mgi_slice__animation.-news{
-        animation: slice 20s ease-out infinite 2s backwards;
+    .mgi_slides__animation.-news{
+        animation: slide 20s ease-out infinite 2s backwards;
     }
-    @keyframes slice2{
+    @keyframes slide2{
         0% {
             margin-left: 0px;
         }
@@ -286,7 +298,7 @@
             margin-left: 0px;
         }
     }
-    @keyframes slice{
+    @keyframes slide{
         0% {
             margin-left: 0px;
         }
