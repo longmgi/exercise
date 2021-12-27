@@ -1011,12 +1011,18 @@ footer h5 {
   left: 0px;
   opacity: 0;
 }
+.mgi_banner__arrow.-left:hover {
+  opacity: 0.5 !important;
+}
 .mgi_banner__arrow.-right {
   visibility: hidden;
   position: absolute;
   top: 50%;
   right: 0px;
   opacity: 0;
+}
+.mgi_banner__arrow.-right:hover {
+  opacity: 0.5 !important;
 }
 .mgi_banner__slides:hover .mgi_banner__arrow.-left {
   visibility: visible;

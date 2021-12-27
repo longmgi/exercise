@@ -237,10 +237,10 @@
     }
     
     .mgi_banner__arrow.-left{
-        @apply absolute top-1/2 left-0 invisible opacity-0;
+        @apply absolute top-1/2 left-0 invisible opacity-0 hover:!opacity-50;
     }
     .mgi_banner__arrow.-right{
-        @apply absolute top-1/2 right-0 invisible opacity-0;
+        @apply absolute top-1/2 right-0 invisible opacity-0 hover:!opacity-50;
     }
     .mgi_banner__slides:hover .mgi_banner__arrow.-left{
         @apply absolute top-1/2 left-5 visible cursor-pointer opacity-75 z-10;
