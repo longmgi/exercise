@@ -79,7 +79,7 @@
         @apply translate-x-[440px];
     }
     #navLeft.-open{
-        @apply px-2.5 min-w-[140px] max-w-[440px] h-screen bg-neutrals-darker fixed top-0 left-0;
+        @apply px-2.5 w-full h-screen bg-neutrals-darker fixed top-0 left-0;
     }
     .mgi_navleft__menu{
         @apply text-[13px] text-gray-lightest uppercase mt-1;
