@@ -326,7 +326,7 @@
         @apply text-neutrals h-[65px] leading-[65px];
     }
     header.-fixtop .mgi_nav__toggle{
-        @apply text-neutrals;
+        @apply text-neutrals-darkest;
     } 
     /* Slide animation */
     .slideinRight {
