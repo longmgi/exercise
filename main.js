@@ -1,10 +1,25 @@
+// Scroll event
 window.addEventListener('scroll', function() {
     var positionX = window.pageYOffset;
-    document.querySelector("header").classList.add("-fixtop");
-    if(positionX <= 80){
+    
+    if(positionX >= 80){
+        document.querySelector("header").classList.add("-fixtop");
+        
+    }else{
         document.querySelector("header").classList.remove("-fixtop");
     }
 });
+// Toggle button
+function toggleNav(){
+    var nav = document.getElementById("navLeft");
+    if(nav.style.display === "none"){
+        nav.style.display = "block";
+        nav.classList.add("-open");
+    }else{
+        nav.style.display = "none";
+        nav.classList.remove("-open");
+    }
+}
 // function prevSlide(){
 //     var currentSlide = document.querySelector(".slideactive");
 //     var prevSlideIndex = document.querySelector(".slideactive + div");

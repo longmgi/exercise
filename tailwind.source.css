@@ -8,7 +8,7 @@
     }
     body{
         font-family: "Source Sans Pro", sans-serif;
-        @apply text-base leading-7 font-normal text-neutrals;
+        @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden;
     }
     a{
         @apply hover:no-underline hover:text-primary duration-300;
@@ -35,7 +35,9 @@
     input{
         @apply appearance-none py-1.5 pl-3 focus:py-1.5 focus:pl-3 focus:outline-none bg-neutrals-darkest border-[1px] border-primary focus:border-gray-border placeholder:text-sm placeholder:text-gray-lighter;
     }
-
+    input.mgi_search__bar{
+        @apply bg-gray-lightest w-full h-8 rounded-full placeholder:text-neutrals-darkest placeholder:text-opacity-60;
+    }
 }
 @layer components{
     .mgi_container, .mgi_banner__item__content{
@@ -50,7 +52,7 @@
     .mgi_nav--desktop{
         @apply flex flex-row;
     }
-    .mgi_nav--mobile{
+    .mgi_nav__toggle{
         @apply desktop:hidden;
     }
     .mgi_nav_button.-icon li{
@@ -73,7 +75,23 @@
         @apply block h-20 px-[15px] leading-[80px];
     }
     /* NavLeft */
-    #navLeft{
+    #navLeft.-open + main{
+        @apply translate-x-[440px];
+    }
+    #navLeft.-open{
+        @apply px-2.5 min-w-[140px] max-w-[440px] h-screen bg-neutrals-darker fixed top-0 left-0;
+    }
+    .mgi_navleft__menu{
+        @apply text-[13px] text-gray-lightest uppercase mt-1;
+    }
+    .mgi_navleft__menu .mgi_navleft__menu__list{
+        @apply border-b-[1px] border-neutrals-darkest;
+    }
+    
+    .mgi_navleft__menu__list--link{
+        @apply block h-10 leading-10;
+    }
+    .mgi_navleft__menu__sub{
         @apply hidden;
     }
     /* dropdown menu  */
@@ -296,7 +314,7 @@
     }
     /* header fix top */
     header.-fixtop{
-        @apply fixed h-[65px] top-0 z-50 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
+        @apply !fixed !h-[65px] top-0 z-50 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
     }
     header.-fixtop .mgi_nav__logo .light{
         @apply hidden;
