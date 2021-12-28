@@ -325,6 +325,9 @@
     header.-fixtop a.mgi_nav__menu__list--link, header.-fixtop .mgi_nav_button.-icon li{
         @apply text-neutrals h-[65px] leading-[65px];
     }
+    header.-fixtop .mgi_nav__toggle{
+        @apply text-neutrals;
+    } 
     /* Slide animation */
     .slideinRight {
         animation: slideIn 1s forwards;

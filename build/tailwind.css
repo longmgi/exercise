@@ -1265,6 +1265,10 @@ header.-fixtop a.mgi_nav__menu__list--link, header.-fixtop .mgi_nav_button.-icon
   --tw-text-opacity: 1;
   color: rgb(67 73 85 / var(--tw-text-opacity));
 }
+header.-fixtop .mgi_nav__toggle {
+  --tw-text-opacity: 1;
+  color: rgb(67 73 85 / var(--tw-text-opacity));
+}
 /* Slide animation */
 .slideinRight {
         -webkit-animation: slideIn 1s forwards;
