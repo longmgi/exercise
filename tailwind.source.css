@@ -27,7 +27,7 @@
         @apply text-base leading-[25px];
     }
     header{
-        @apply transition-transform ease-in-out duration-500;
+        @apply bg-neutrals-darkest desktop:bg-opacity-0 relative desktop:absolute top-0 left-0 w-full z-10 transition-transform ease-in-out duration-500;
     }
     footer{
         @apply bg-neutrals-darkest;
@@ -35,6 +35,7 @@
     input{
         @apply appearance-none py-1.5 pl-3 focus:py-1.5 focus:pl-3 focus:outline-none bg-neutrals-darkest border-[1px] border-primary focus:border-gray-border placeholder:text-sm placeholder:text-gray-lighter;
     }
+
 }
 @layer components{
     .mgi_container, .mgi_banner__item__content{
@@ -53,7 +54,7 @@
         @apply desktop:hidden;
     }
     .mgi_nav_button.-icon li{
-        @apply h-20 leading-[80px] px-[15px] transition-transform ease-in-out duration-500;
+        @apply h-[60px] leading-[60px] desktop:h-20 desktop:leading-[80px] px-[15px] transition-transform ease-in-out duration-500;
 
     }
     .mgi_nav__logo{
@@ -70,6 +71,10 @@
     }
     .mgi_nav__menu__list a.mgi_nav__menu__list--link{
         @apply block h-20 px-[15px] leading-[80px];
+    }
+    /* NavLeft */
+    #navLeft{
+        @apply hidden;
     }
     /* dropdown menu  */
     .mgi_nav__menu__dropdown, .mgi_nav__menu__dropdown__submenu__sub2{
@@ -225,6 +230,12 @@
     }
     .mgi_contact{
         @apply flex flex-row pb-[10px] gap-x-[25px];
+    }
+    .mgi_banner__item__content__title{
+        @apply text-5xl leading-10 desktop:text-[98px] desktop:leading-[98px] text-[#fff] font-black;
+    }
+    .mgi_banner__item__content__description{
+        @apply hidden desktop:inline-block text-[#fff] text-lg text-center pb-[30px] leading-[30.6px];
     }
     /* Slide */
     .mgi_banner__slides.-full{
