@@ -26,6 +26,9 @@
     h6{
         @apply text-base leading-[25px];
     }
+    header{
+        @apply transition-transform ease-in-out duration-500;
+    }
     footer{
         @apply bg-neutrals-darkest;
     }
@@ -34,9 +37,10 @@
     }
 }
 @layer components{
-    .mgi_container{
+    .mgi_container, .mgi_banner__item__content{
         @apply container mx-auto px-[15px];
     }
+    
     /* Nav menu */
     .mgi_nav{
         @apply flex text-xs font-semibold uppercase text-[#fff];
@@ -49,10 +53,14 @@
         @apply desktop:hidden;
     }
     .mgi_nav_button.-icon li{
-        @apply h-20 leading-[80px] px-[15px];
+        @apply h-20 leading-[80px] px-[15px] transition-transform ease-in-out duration-500;
+
     }
     .mgi_nav__logo{
         @apply px-[15px];
+    }
+    .mgi_nav__logo .dark{
+        @apply hidden;
     }
     .mgi_nav__menu{
         @apply hidden desktop:flex desktop:flex-row;
@@ -219,6 +227,15 @@
         @apply flex flex-row pb-[10px] gap-x-[25px];
     }
     /* Slide */
+    .mgi_banner__slides.-full{
+        @apply overflow-hidden;
+    }
+    .mgi_banner__slides.-full .mgi_banner__slides__wrap{
+        @apply w-max flex flex-row flex-nowrap;
+    }
+    .mgi_banner__slides__item{
+        @apply w-screen;
+    }
     .mgi_banner__dots{
         @apply mx-auto py-3 absolute bottom-3.5 left-1/2 -translate-x-1/2;
     }
@@ -265,6 +282,37 @@
     }
     .mgi_slides__arrow.-right{
         @apply absolute top-1/2 -right-20 hover:text-primary;
+    }
+    /* header fix top */
+    header.-fixtop{
+        @apply fixed h-[65px] top-0 z-50 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
+    }
+    header.-fixtop .mgi_nav__logo .light{
+        @apply hidden;
+    }
+    header.-fixtop .mgi_nav__logo .dark{
+        @apply block;
+    }
+    header.-fixtop a.mgi_nav__menu__list--link, header.-fixtop .mgi_nav_button.-icon li{
+        @apply text-neutrals h-[65px] leading-[65px];
+    }
+    /* Slide animation */
+    .slideinRight {
+        animation: slideIn 1s forwards;
+      }
+       
+    .slideinLeft {
+        animation: slideIn 1s forwards;
+    }
+    @keyframes slideIn {
+        100% {
+            margin: 0;
+        }
+    }
+    @keyframes slideOutLeft {
+        100% {
+            margin-left: -100%;
+        }
     }
     /* .mgi_slide__item{
         @apply snap-always snap-start;

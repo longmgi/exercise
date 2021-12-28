@@ -11,19 +11,23 @@
     <!-- css -->
     <link rel="stylesheet" href="build/tailwind.css">
     <script src="https://kit.fontawesome.com/33e5108af7.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./jquery/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
 </head>
 <body>
     
     <main>
         <section id="banner" style="background-image: url('./images/9.jpg');" class="bg-cover bg-center bg-no-repeat pt-[50px] bg-fixed relative">
             <header class="absolute top-0 left-0 w-full z-10"> 
-                <nav class="sticky">
+                <nav class="">
                     <div class="mgi_nav mgi_container desktop:justify-between mx-auto">
                         <div class="mgi_nav--mobile self-center">
                             <i class="fas fa-bars" style="font-size: 24px; color: #fff"></i>
                         </div>
                         <div class="mgi_nav__logo self-center">
-                            <img src="./images/logo-light.png" alt="logo" class="">
+                            <img src="./images/logo-light.png" alt="logo" class="light">
+                            <img src="./images/logo.png" alt="logo" class="dark">
                         </div>
                         <div class="mgi_nav--desktop flex-grow justify-end self-center">
                             <ul class="mgi_nav__menu">
@@ -488,8 +492,8 @@
                             </ul>
                             <div class="mgi_nav__button">
                                 <ul class="mgi_nav_button -icon flex flex-row">
-                                    <li><a href="#"><i class="fas fa-search" class="color: #fff, font-size: 9px"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-shopping-bag" class="color: #fff, font-size: 9px"></i></a></li>
+                                    <li><a href="#" class="mgi_nav__menu__list--link"><i class="fas fa-search" class="color: #fff, font-size: 9px"></i></a></li>
+                                    <li><a href="#" class="mgi_nav__menu__list--link"><i class="fas fa-shopping-bag" class="color: #fff, font-size: 9px"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -499,7 +503,29 @@
             </header>
             <!-- Slide hero -->
             <div class="mgi_banner__slides -full">
-                <div class="mgi_container py-20">
+                <div class="mgi_banner__slides__wrap py-20">
+                    <div class="mgi_banner__slides__item active">
+                        <div class="mgi_banner__item__content pt-[50px]">
+                            <h2 class="mgi_banner__item__content__title text-[98px] leading-[98px] text-[#fff] font-black uppercase text-center pb-[15px]">
+                                We Are Creative
+                            </h2>
+                            <p class="mgi_banner__item__content__description text-[#fff] text-lg text-center pb-[30px] leading-[30.6px]">
+                                We believe in Simple, Creative & Flexible Design Standards. Unlimited features, elements and fast and friendly support gives ultimate website to boom your business.
+                            </p>
+                            <button class="mgi_button mx-auto mt-[7px] mb-8">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="mgi_banner__slides__item">
+                        <div class="mgi_banner__item__content pt-[50px]">
+                            <h2 class="mgi_banner__item__content__title text-[98px] leading-[98px] text-[#fff] font-black uppercase text-center pb-[15px]">
+                                We Are Creative
+                            </h2>
+                            <p class="mgi_banner__item__content__description text-[#fff] text-lg text-center pb-[30px] leading-[30.6px]">
+                                We believe in Simple, Creative & Flexible Design Standards. Unlimited features, elements and fast and friendly support gives ultimate website to boom your business.
+                            </p>
+                            <button class="mgi_button mx-auto mt-[7px] mb-8">Learn more</button>
+                        </div>
+                    </div>
                     <div class="mgi_banner__slides__item">
                         <div class="mgi_banner__item__content pt-[50px]">
                             <h2 class="mgi_banner__item__content__title text-[98px] leading-[98px] text-[#fff] font-black uppercase text-center pb-[15px]">
