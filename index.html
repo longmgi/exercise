@@ -11,11 +11,28 @@
     <!-- css -->
     <link rel="stylesheet" href="build/tailwind.css">
     <script src="https://kit.fontawesome.com/33e5108af7.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./jquery/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+    <!-- <script type="text/javascript" src="./jquery/jquery-3.6.0.min.js"></script> -->
+    
 
 </head>
 <body>
+    <!-- Choose device -->
+    <div class="mgi_device">
+        <div class="mgi_container">
+            <div class="mgi_devcde__group -mobile">
+                <input type="radio" id="mobile" name="listdevice" value="Mobile">
+                <label for="mobile">Mobile</label>
+            </div>
+            <div class="mgi_device__group -tablet">
+                <input type="radio" id="tablet" name="listdevice" value="Tablet">
+                <label for="tablet">Tablet</label>
+            </div>
+            <div class="mgi_device__group -desktop">
+                <input type="radio" id="desktop" name="listdevice" value="Desktop">
+                <label for="desktop">Desktop</label>
+            </div>
+        </div>
+    </div>
     <div id="navLeft" style="display: none;">
         <h6 class="uppercase text-center text-gray-lightest pt-2.5 pb-5">menu</h6>
         <div class="mgi_search">
@@ -546,10 +563,10 @@
             <!-- Slide hero -->
             <div class="mgi_banner__slides -full">
                 <div class="mgi_banner__slides__wrap py-20">
-                    <div class="mgi_banner__slides__item active">
+                    <div class="mgi_banner__slides__item">
                         <div class="mgi_banner__item__content pt-[50px]">
                             <h2 class="mgi_banner__item__content__title uppercase text-center pb-[15px]">
-                                We Are Creative
+                                We Are Creative 1
                             </h2>
                             <p class="mgi_banner__item__content__description">
                                 We believe in Simple, Creative & Flexible Design Standards. Unlimited features, elements and fast and friendly support gives ultimate website to boom your business.
@@ -560,7 +577,7 @@
                     <div class="mgi_banner__slides__item">
                         <div class="mgi_banner__item__content pt-[50px]">
                             <h2 class="mgi_banner__item__content__title uppercase text-center pb-[15px]">
-                                We Are Creative
+                                We Are Creative 2
                             </h2>
                             <p class="mgi_banner__item__content__description">
                                 We believe in Simple, Creative & Flexible Design Standards. Unlimited features, elements and fast and friendly support gives ultimate website to boom your business.
@@ -571,7 +588,7 @@
                     <div class="mgi_banner__slides__item">
                         <div class="mgi_banner__item__content pt-[50px]">
                             <h2 class="mgi_banner__item__content__title uppercase text-center pb-[15px]">
-                                We Are Creative
+                                We Are Creative 3
                             </h2>
                             <p class="mgi_banner__item__content__description">
                                 We believe in Simple, Creative & Flexible Design Standards. Unlimited features, elements and fast and friendly support gives ultimate website to boom your business.
@@ -583,23 +600,20 @@
                 <!-- control -->
                 <div class="mgi_banner__control">
                     <div class="mgi_banner__dots flex flex-row gap-6 items-center justify-center">
-                        <div class="mgi_banner__dots__dot -active">
-                            <span></span>
-                        </div>
-                        <div class="mgi_banner__dots__dot">
-                            <span></span>
-                        </div>
-                        <div class="mgi_banner__dots__dot">
-                            <span></span>
-                        </div>
+                        <button class="mgi_banner__dots__dot -active" onclick="currentSlide(1)">
+                        </button>
+                        <button class="mgi_banner__dots__dot" onclick="currentSlide(2)">
+                        </button>
+                        <button class="mgi_banner__dots__dot" onclick="currentSlide(3)">
+                        </button>
                     </div>
                     <div class="mgi_banner__arrows">
-                        <div class="mgi_banner__arrow -left">
+                        <button class="mgi_banner__arrow -left" onclick="moveSlide(-1)">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="mgi_banner__arrow -right">
+                        </button>
+                        <button class="mgi_banner__arrow -right" onclick="moveSlide(1)">
                             <i class="fas fa-chevron-right"></i>
-                        </div>
+                        </button>
                     </div>
                     
                 </div>
@@ -1005,5 +1019,6 @@
     <button id="scrollTop" class="" onclick="goTop(1000)" title="Go to top">
         <i class="fas fa-chevron-up"></i>
     </button>
+    <script src="main.js"></script>
 </body>
 </html>

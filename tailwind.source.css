@@ -263,16 +263,23 @@
         @apply w-max flex flex-row flex-nowrap;
     }
     .mgi_banner__slides__item{
-        @apply w-screen;
+        @apply w-screen hidden;
+        animation: moveright 2s;
     }
+    /* .mgi_banner__slides__item.-moveright{
+        animation: moveright 2s;
+    }
+    .mgi_banner__slides__item.-moveleft{
+        animation: moveleft 2s;
+    } */
     .mgi_banner__dots{
         @apply mx-auto py-3 absolute bottom-3.5 left-1/2 -translate-x-1/2;
     }
 
-    .mgi_banner__dots__dot span{
+    .mgi_banner__dots__dot{
         @apply block w-[10px] h-[10px] leading-[10px] rounded-full bg-[#fff] cursor-pointer;
     }
-    .mgi_banner__dots__dot:not(.-active) span{
+    .mgi_banner__dots__dot:not(.-active){
         @apply opacity-60 hover:outline hover:outline-[#fff] hover:outline-offset-[5px] hover:outline-2  hover:opacity-100;
     }
     .mgi_banner__dots__dot.-active{
@@ -395,6 +402,21 @@
             margin-left: 0px;
         }
     }
+    /* Fading animation */
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    /* Translate animation */
+    
+    @keyframes moveright {
+        from {transform: translateX(100%)}
+        to {transform: translateX(0)}
+    }@keyframes moveleft {
+        from {transform: translateX(-100%)}
+        to {transform: translateX(0)}
+    }
     /* Scroll top */
     #scrolltop{
         @apply hidden;
@@ -402,5 +424,14 @@
     #scrollTop.-show{
         @apply hidden desktop:block fixed right-10 bottom-10 w-8 h-8 opacity-100 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
     }
+    /* Choose device */
+    .mgi_device{
+        @apply bg-neutrals-darker text-gray-lighter uppercase;
+    }
+    .mgi_device .mgi_container{
+        @apply grid grid-cols-3 justify-items-center;
+    }
+    .mgi_device input{
+        @apply checked:bg-primary bg-gray-lightest invisible;
+    }
 }
-    
