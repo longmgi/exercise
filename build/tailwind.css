@@ -1279,14 +1279,6 @@ header.-fixtop .mgi_nav__toggle {
   color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 /* Slide animation */
-.slideinRight {
-        -webkit-animation: slideIn 1s forwards;
-                animation: slideIn 1s forwards;
-      }
-.slideinLeft {
-        -webkit-animation: slideIn 1s forwards;
-                animation: slideIn 1s forwards;
-    }
 @-webkit-keyframes slideIn {
         100% {
             margin: 0;
