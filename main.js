@@ -4,9 +4,10 @@ window.addEventListener('scroll', function() {
     
     if(positionX >= 80){
         document.querySelector("header").classList.add("-fixtop");
-        
+        document.querySelector("#scrollTop").classList.add("-show");
     }else{
         document.querySelector("header").classList.remove("-fixtop");
+        document.querySelector("#scrollTop").classList.remove("-show");
     }
 });
 // Toggle button
@@ -20,6 +21,8 @@ function toggleNav(){
         nav.classList.remove("-open");
     }
 }
+// Scroll top
+
 // function prevSlide(){
 //     var currentSlide = document.querySelector(".slideactive");
 //     var prevSlideIndex = document.querySelector(".slideactive + div");

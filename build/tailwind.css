@@ -385,6 +385,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     body{
         font-family: "Source Sans Pro", sans-serif;
         overflow-x: hidden;
+        scroll-behavior: smooth;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.75rem;
@@ -1382,6 +1383,39 @@ header.-fixtop .mgi_nav__toggle {
             margin-left: 0px;
         }
     }
+/* Scroll top */
+#scrolltop {
+  display: none;
+}
+#scrollTop.-show {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(247 247 247 / var(--tw-text-opacity));
+  opacity: 1;
+}
+#scrollTop.-show:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(247 247 247 / var(--tw-text-opacity));
+}
+@media (min-width: 1335px) {
+
+  #scrollTop.-show {
+    display: block;
+  }
+}
 .\!static {
   position: static !important;
 }

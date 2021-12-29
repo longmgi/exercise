@@ -8,7 +8,7 @@
     }
     body{
         font-family: "Source Sans Pro", sans-serif;
-        @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden;
+        @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden scroll-smooth;
     }
     a{
         @apply hover:no-underline hover:text-primary duration-300;
@@ -394,6 +394,13 @@
         100% {
             margin-left: 0px;
         }
+    }
+    /* Scroll top */
+    #scrolltop{
+        @apply hidden;
+    }
+    #scrollTop.-show{
+        @apply hidden desktop:block fixed right-10 bottom-10 w-8 h-8 opacity-100 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
     }
 }
     
