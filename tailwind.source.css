@@ -432,17 +432,17 @@
         @apply pr-1;
     }
     .mgi_device .mgi_container{
-        @apply flex flex-row gap-x-6 justify-start;
+        @apply flex flex-row justify-center;
     }
     
     .mgi_device__group input{
         @apply hidden;
     }
-    .mgi_device__group.-active{
-        @apply bg-primary text-[#fff] font-semibold;
+    .mgi_device__group.active{
+        @apply bg-primary text-[#fff] font-semibold hover:bg-primary;
     }
     .mgi_device__group{
-        @apply block py-2 px-2;
+        @apply block py-2 px-5 cursor-pointer hover:bg-neutrals-darkest min-w-[120px] text-center;
     }
     .mgi_iframe{
         @apply block absolute top-0 desktop:top-9 left-0 right-0 bottom-0;

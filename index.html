@@ -24,7 +24,7 @@
                 <input type="radio" id="tablet" name="listdevice" value="Tablet">
                 <span><i class="fas fa-tablet-alt mgi_device__icon"></i> Tablet</span>
             </label>
-            <label for="desktop" class="mgi_device__group -desktop -active" onclick="checkbtn(3)">
+            <label for="desktop" class="mgi_device__group -desktop active" onclick="checkbtn(3)">
                 <input type="radio" id="desktop" name="listdevice" value="Desktop">
                 <span><i class="fas fa-desktop mgi_device__icon"></i> Desktop</span>
             </label>
@@ -40,16 +40,25 @@
             if(n == "1"){
                 var device = 'mobile';
                 iframe.style.width = '375px';
-                console.log(x);
+                for (var i = 0; i < checkbox.length; i++) {
+                    checkbox[i].className = checkbox[i].className.replace(" active", "");
+                }
+                document.querySelector(".mgi_device__group.-mobile").classList.add("active");
             }
             else if(n == "2"){
                 iframe.style.width = '768px';
-                console.log(x);
+                for (var i = 0; i < checkbox.length; i++) {
+                    checkbox[i].className = checkbox[i].className.replace(" active", "");
+                }
+                document.querySelector(".mgi_device__group.-tablet").classList.add("active");
             }
             else
             {
                 iframe.style.width = '100%'; 
-                console.log(x);
+                for (var i = 0; i < checkbox.length; i++) {
+                    checkbox[i].className = checkbox[i].className.replace(" active", "");
+                }
+                document.querySelector(".mgi_device__group.-desktop").classList.add("active");
             }
         }
         
