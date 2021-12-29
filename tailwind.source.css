@@ -426,12 +426,21 @@
     }
     /* Choose device */
     .mgi_device{
-        @apply bg-neutrals-darker text-gray-lighter uppercase;
+        @apply bg-neutrals-darker text-sm text-gray-lighter min-h-max uppercase sticky top-0 left-0 z-50 w-full;
+    }
+    .mgi_device .mgi_device__icon{
+        @apply pr-1;
     }
     .mgi_device .mgi_container{
-        @apply grid grid-cols-3 justify-items-center;
+        @apply flex flex-row gap-x-3 justify-start;
     }
     .mgi_device input{
         @apply checked:bg-primary bg-gray-lightest invisible;
+    }
+    .mgi_device__group{
+        @apply py-2;
+    }
+    .mgi_iframe{
+        @apply block absolute top-9 left-0 right-0 bottom-0;
     }
 }
