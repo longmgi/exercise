@@ -75,5 +75,3 @@ setInterval(function(){
     slideIndex++;
     showSlides(slideIndex);
 }, 9000);
-
-// Change device

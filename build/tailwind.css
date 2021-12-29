@@ -678,7 +678,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 /* NavLeft */
 #navLeft.-open + main {
-  --tw-translate-x: 440px;
+  --tw-translate-x: 80%;
   transform: var(--tw-transform);
 }
 #navLeft.-open {
@@ -686,7 +686,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
   left: 0px;
   height: 100vh;
-  width: 100%;
+  width: 80%;
   --tw-bg-opacity: 1;
   background-color: rgb(34 34 34 / var(--tw-bg-opacity));
   padding-left: 0.625rem;
@@ -1450,6 +1450,7 @@ header.-fixtop .mgi_nav__toggle {
   top: 0px;
   left: 0px;
   z-index: 50;
+  display: none;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
@@ -1462,6 +1463,12 @@ header.-fixtop .mgi_nav__toggle {
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
 }
+@media (min-width: 1335px) {
+
+  .mgi_device {
+    display: block;
+  }
+}
 .mgi_device .mgi_device__icon {
   padding-right: 0.25rem;
 }
@@ -1469,29 +1476,43 @@ header.-fixtop .mgi_nav__toggle {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
 }
-.mgi_device input {
-  visibility: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 247 247 / var(--tw-bg-opacity));
+.mgi_device__group input {
+  display: none;
 }
-.mgi_device input:checked {
+.mgi_device__group.-active {
   --tw-bg-opacity: 1;
   background-color: rgb(52 152 219 / var(--tw-bg-opacity));
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .mgi_device__group {
+  display: block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .mgi_iframe {
   position: absolute;
-  top: 2.25rem;
+  top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
   display: block;
+}
+@media (min-width: 1335px) {
+
+  .mgi_iframe {
+    top: 2.25rem;
+  }
+}
+#mgiSite {
+  margin-left: auto;
+  margin-right: auto;
 }
 .\!static {
   position: static !important;

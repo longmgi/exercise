@@ -16,23 +16,43 @@
     <!-- Choose device -->
     <div class="mgi_device">
         <div class="mgi_container">
-            <div class="mgi_device__group -mobile">
+            <label for="mobile" class="mgi_device__group -mobile" onclick="checkbtn(1)">
                 <input type="radio" id="mobile" name="listdevice" value="Mobile">
-                <label for="mobile"><i class="fas fa-mobile-alt mgi_device__icon"></i> Mobile</label>
-            </div>
-            <div class="mgi_device__group -tablet">
+                <span><i class="fas fa-mobile-alt mgi_device__icon"></i> Mobile</span>
+            </label>
+            <label for="tablet" class="mgi_device__group -tablet" onclick="checkbtn(2)">
                 <input type="radio" id="tablet" name="listdevice" value="Tablet">
-                <label for="tablet"><i class="fas fa-tablet-alt mgi_device__icon"></i> Tablet</label>
-            </div>
-            <div class="mgi_device__group -desktop">
+                <span><i class="fas fa-tablet-alt mgi_device__icon"></i> Tablet</span>
+            </label>
+            <label for="desktop" class="mgi_device__group -desktop -active" onclick="checkbtn(3)">
                 <input type="radio" id="desktop" name="listdevice" value="Desktop">
-                <label for="desktop"><i class="fas fa-desktop mgi_device__icon"></i> Desktop</label>
-            </div>
+                <span><i class="fas fa-desktop mgi_device__icon"></i> Desktop</span>
+            </label>
         </div>
     </div>
     <div class="mgi_iframe">
-        <iframe src="./iframe.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;" height="100%" width="100%"></iframe>
+        <iframe id="mgiSite" src="./iframe.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;" height="100%" width="100%"></iframe>
     </div>
-    
+    <script>
+        var checkbox = document.getElementsByClassName("mgi_device__group");
+        var iframe = document.getElementById('mgiSite');
+        function checkbtn(n){
+            if(n == "1"){
+                var device = 'mobile';
+                iframe.style.width = '375px';
+                console.log(x);
+            }
+            else if(n == "2"){
+                iframe.style.width = '768px';
+                console.log(x);
+            }
+            else
+            {
+                iframe.style.width = '100%'; 
+                console.log(x);
+            }
+        }
+        
+    </script>
 </body>
 </html>
