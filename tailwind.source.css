@@ -250,7 +250,7 @@
         @apply flex flex-row pb-[10px] gap-x-[25px];
     }
     .mgi_banner__item__content__title{
-        @apply text-5xl leading-10 desktop:text-[98px] desktop:leading-[98px] text-[#fff] font-black;
+        @apply text-5xl leading-[48px] desktop:text-[98px] desktop:leading-[98px] text-[#fff] font-black;
     }
     .mgi_banner__item__content__description{
         @apply hidden desktop:inline-block text-[#fff] text-lg text-center pb-[30px] leading-[30.6px];

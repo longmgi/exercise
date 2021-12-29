@@ -1059,7 +1059,7 @@ footer h5 {
 .mgi_banner__item__content__title {
   font-size: 3rem;
   font-weight: 900;
-  line-height: 2.5rem;
+  line-height: 48px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
