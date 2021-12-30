@@ -86,3 +86,13 @@ function toggleSearchbar(){
     else
         document.querySelector(".mgi_nav").classList.remove("-openToggle");
 }
+//Shopcart
+function toggleShopcart(){
+    var checkopen = document.querySelector(".mgi_shopcart").classList.contains("-openToggle");
+    if(!checkopen)
+    {
+        document.querySelector(".mgi_shopcart").classList.add("-openToggle");
+    }
+    else
+        document.querySelector(".mgi_shopcart").classList.remove("-openToggle");
+}
