@@ -75,3 +75,14 @@ setInterval(function(){
     slideIndex++;
     showSlides(slideIndex);
 }, 9000);
+
+//Searchbar
+function toggleSearchbar(){
+    var checkopen = document.querySelector(".mgi_nav").classList.contains("-openToggle");
+    if(!checkopen)
+    {
+        document.querySelector(".mgi_nav").classList.add("-openToggle");
+    }
+    else
+        document.querySelector(".mgi_nav").classList.remove("-openToggle");
+}
