@@ -915,6 +915,7 @@ a.mgi_nav__menu__list--link {
 }
 .mgi_nav__function__button__list {
   position: relative;
+  cursor: pointer;
 }
 /* search tool */
 .mgi_searchbar {

@@ -157,7 +157,7 @@
         @apply bg-neutrals-darkest hover:bg-[#fff] hover:text-[#333];
     }
     .mgi_nav__function__button__list{
-        @apply relative;
+        @apply relative cursor-pointer;
     }
     /* search tool */
     .mgi_searchbar{
