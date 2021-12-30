@@ -1025,9 +1025,12 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
   padding-top: 3px;
   padding-bottom: 0.375rem;
 }
+.mgi_shopcart__item__thumb {
+  width: 70px;
+}
 .mgi_shopcart__item__thumb img {
   height: 70px;
-  width: 70px;
+  width: 100% !important;
 }
 .mgi_shopcart__item__info a {
   display: block;

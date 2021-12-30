@@ -198,9 +198,11 @@
     .mgi_shopcart__item{
         @apply flex flex-row my-[3px] pt-[3px] pb-1.5 gap-x-[15px];
     }
-    
+    .mgi_shopcart__item__thumb{
+        @apply w-[70px];
+    }
     .mgi_shopcart__item__thumb img{
-        @apply w-[70px] h-[70px];
+        @apply !w-full h-[70px];
     }
     .mgi_shopcart__item__info a{
         @apply block;
