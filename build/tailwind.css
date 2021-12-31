@@ -1414,18 +1414,32 @@ footer h5 {
   outline-color: #fff;
 }
 .mgi_banner__arrow {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(52 152 219 / var(--tw-bg-opacity));
   text-align: center;
   font-size: 0.75rem;
-  line-height: 50px;
+  line-height: 30px;
   color: #ffff;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+@media (min-width: 1335px) {
+
+  .mgi_banner__arrow {
+    height: 50px;
+  }
+
+  .mgi_banner__arrow {
+    width: 50px;
+  }
+
+  .mgi_banner__arrow {
+    line-height: 50px;
+  }
 }
 .mgi_banner__arrow.-left {
   visibility: hidden;

@@ -368,7 +368,7 @@
         @apply rounded-full outline outline-[#fff] outline-offset-[5px] outline-2;
     }
     .mgi_banner__arrow{
-        @apply text-xs text-[#ffff] w-[50px] h-[50px] text-center leading-[50px] bg-primary rounded-full transition-all duration-300;
+        @apply text-xs text-[#ffff] w-[30px] h-[30px] desktop:w-[50px] desktop:h-[50px] text-center leading-[30px] desktop:leading-[50px] bg-primary rounded-full transition-all duration-300;
     }
     
     .mgi_banner__arrow.-left{
