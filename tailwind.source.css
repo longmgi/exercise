@@ -81,7 +81,9 @@
     #navLeft.-openmenu + main{
         @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
     }
-
+    #navLeft.-openmenu ~ footer{
+        @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
+    }
     #navLeft{
         @apply absolute top-0 left-0 w-0 transition-all ease-out duration-300;
     }

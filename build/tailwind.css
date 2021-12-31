@@ -704,6 +704,20 @@ a.mgi_nav__menu__list--link {
     transform: var(--tw-transform);
   }
 }
+#navLeft.-openmenu ~ footer {
+  --tw-translate-x: 80%;
+  transform: var(--tw-transform);
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+@media (min-width: 1335px) {
+
+  #navLeft.-openmenu ~ footer {
+    --tw-translate-x: 0px;
+    transform: var(--tw-transform);
+  }
+}
 #navLeft {
   position: absolute;
   top: 0px;
@@ -1866,6 +1880,9 @@ header.-fixtop .mgi_nav__toggle {
 }
 .grow {
   flex-grow: 1;
+}
+.transform {
+  transform: var(--tw-transform);
 }
 .snap-x {
   -ms-scroll-snap-type: x var(--tw-scroll-snap-strictness);

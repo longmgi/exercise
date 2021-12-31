@@ -26,7 +26,6 @@ document.addEventListener('click', function(event) {
     var checkMenu = nav.classList.contains("-openmenu");
     var isClickInside = nav.contains(event.target);
     var isClickbutton = toggleBtn.contains(event.target);
-    console.log(checkMenu);
     if(checkMenu && !isClickInside && !isClickbutton) {
         nav.classList.remove("-openmenu");
     }
@@ -85,6 +84,8 @@ setInterval(function(){
     slideIndex++;
     showSlides(slideIndex);
 }, 9000);
+
+//Project slide DOING....
 
 //Searchbar
 function toggleSearchbar(){

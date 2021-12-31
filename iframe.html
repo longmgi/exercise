@@ -720,7 +720,7 @@
                 <!-- Slide projects -->
                 <div class="mgi_slides">
                     <div class="mgi_slides__wrap">
-                        <div class="snap-x snap-mandatory -project auto-cols-[262.5px] gap-x-[30px]">
+                        <div id="projectSlide" class="snap-x snap-mandatory -project auto-cols-[262.5px] gap-x-[30px]">
                             <div class="mgi_slides__item -center">
                                 <div class="mgi_slides__item__thumb">
                                     <img src="./images/projects/slide1.jpg" alt="">
@@ -782,12 +782,12 @@
                     
                     <!-- control -->
                     <div class="mgi_slides__arrows">
-                        <div class="mgi_slides__arrow -left">
+                        <a class="mgi_slides__arrow -left" onclick="prevSlides()">
                             <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="mgi_slides__arrow -right">
+                        </a>
+                        <a class="mgi_slides__arrow -right" onclick="nextSlides()">
                             <i class="fas fa-chevron-right"></i>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- End Slide projects -->
