@@ -78,11 +78,14 @@
         @apply px-[15px];
     }
     /* NavLeft */
-    #navLeft.-open + main{
-        @apply translate-x-[80%];
+    #navLeft.-openmenu + main{
+        @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
     }
-    #navLeft.-open{
-        @apply px-2.5 w-[80%] h-screen bg-neutrals-darker fixed top-0 left-0;
+    #navLeft{
+        @apply absolute top-0 left-0 w-0 transition-all ease-out duration-300;
+    }
+    #navLeft.-openmenu{
+        @apply desktop:hidden px-2.5 w-[81%] h-screen bg-neutrals-darker fixed top-0 left-0 z-30 transition-all ease-out duration-300;
     }
     .mgi_navleft__menu{
         @apply text-[13px] text-gray-lightest uppercase mt-1;
@@ -198,11 +201,8 @@
     .mgi_shopcart__item{
         @apply flex flex-row my-[3px] pt-[3px] pb-1.5 gap-x-[15px];
     }
-    .mgi_shopcart__item__thumb{
-        @apply w-[70px];
-    }
     .mgi_shopcart__item__thumb img{
-        @apply !w-full h-[70px];
+        @apply max-w-none w-[70px] h-[70px];
     }
     .mgi_shopcart__item__info a{
         @apply block;
