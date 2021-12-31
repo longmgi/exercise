@@ -12,8 +12,7 @@ window.addEventListener('scroll', function() {
 });
 // Toggle button
 var nav = document.getElementById("navLeft");
-var btnToggle = document.getElementById("btnToggle");
-
+var toggleBtn = document.getElementById("btnToggle");
 function toggleNav(){
     var checkMenu = nav.classList.contains("-openmenu");
     if(!checkMenu){
@@ -22,11 +21,13 @@ function toggleNav(){
         nav.classList.remove("-openmenu");
     }
 }
-
+toggleBtn.addEventListener("click", toggleNav); 
 document.addEventListener('click', function(event) {
-    var isClickInside = btnToggle.contains(event.target);
-
-    if(!isClickInside) {
+    var checkMenu = nav.classList.contains("-openmenu");
+    var isClickInside = nav.contains(event.target);
+    var isClickbutton = toggleBtn.contains(event.target);
+    console.log(checkMenu);
+    if(checkMenu && !isClickInside && !isClickbutton) {
         nav.classList.remove("-openmenu");
     }
 });
