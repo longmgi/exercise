@@ -1881,9 +1881,6 @@ header.-fixtop .mgi_nav__toggle {
 .grow {
   flex-grow: 1;
 }
-.transform {
-  transform: var(--tw-transform);
-}
 .snap-x {
   -ms-scroll-snap-type: x var(--tw-scroll-snap-strictness);
       scroll-snap-type: x var(--tw-scroll-snap-strictness);
