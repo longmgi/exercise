@@ -72,7 +72,7 @@
         @apply relative;
     }
     nav a.mgi_nav__menu__list--link{
-        @apply block h-20 leading-[80px] ;
+        @apply block h-[60px] desktop:h-20 leading-[60px] desktop:leading-[80px] ;
     }
     a.mgi_nav__menu__list--link{
         @apply px-[15px];
@@ -81,6 +81,7 @@
     #navLeft.-openmenu + main{
         @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
     }
+
     #navLeft{
         @apply absolute top-0 left-0 w-0 transition-all ease-out duration-300;
     }
@@ -167,23 +168,26 @@
         @apply hidden;
     }
     .mgi_nav.-openToggle .mgi_searchbar{
-        @apply absolute top-0 left-0 w-full flex flex-row justify-between transition-all ease-linear duration-300;
+        @apply relative desktop:absolute desktop:top-0 desktop:left-0 w-full flex flex-row justify-between bg-neutrals-darkest desktop:bg-opacity-0 transition-transform ease-linear duration-300;
     }
     .mgi_nav.-openToggle .mgi_nav__logo, .mgi_nav.-openToggle .mgi_nav__menu, .mgi_nav.-openToggle .mgi_nav__function__button, .mgi_nav.-openToggle .mgi_nav__toggle{
         @apply hidden transition-all ease-linear duration-300;
     }
     .mgi_searchbar .mgi_searchbar__icon{
-        @apply block h-[80px] leading-[80px] px-[15px];
+        @apply block h-[60px] desktop:h-[80px] leading-[60px] desktop:leading-[80px] px-[15px];
     }
     .mgi_searchbar form{
         @apply flex-grow;
     }
     .mgi_searchbar input{
         font-family: "Source Sans Pro", sans-serif;
-        @apply py-1.5 text-2xl font-normal w-full h-[80px] placeholder:text-2xl placeholder:text-gray-meta border-none bg-opacity-0;
+        @apply py-1.5 px-3 text-2xl font-normal w-full h-[60px] desktop:h-[80px] placeholder:text-2xl placeholder:text-gray-meta border-none bg-opacity-0;
+    }
+    header.-fixtop .mgi_nav.-openToggle .mgi_searchbar{
+        @apply bg-opacity-0;
     }
     header.-fixtop .mgi_searchbar input, header.-fixtop .mgi_searchbar .mgi_searchbar__icon{
-        @apply text-neutrals h-[65px] leading-[65px] ;
+        @apply text-neutrals h-[65px] leading-[65px];
     }
     header.-fixtop .mgi_searchbar .mgi_searchbar__icon{
         @apply hover:text-primary;
@@ -520,7 +524,7 @@
         @apply bg-primary text-[#fff] font-semibold hover:bg-primary;
     }
     .mgi_device__group{
-        @apply block py-2 px-5 cursor-pointer hover:bg-neutrals-darkest min-w-[120px] text-center;
+        @apply block py-2 px-5 cursor-pointer hover:bg-neutrals-darkest hover:text-[#fff] min-w-[120px] text-center;
     }
     .mgi_iframe{
         @apply block absolute top-0 desktop:top-9 left-0 right-0 bottom-0;

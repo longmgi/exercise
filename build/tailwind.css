@@ -672,8 +672,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 nav a.mgi_nav__menu__list--link {
   display: block;
-  height: 5rem;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
+}
+@media (min-width: 1335px) {
+
+  nav a.mgi_nav__menu__list--link {
+    height: 5rem;
+  }
+
+  nav a.mgi_nav__menu__list--link {
+    line-height: 80px;
+  }
 }
 a.mgi_nav__menu__list--link {
   padding-left: 15px;
@@ -951,16 +961,34 @@ a.mgi_nav__menu__list--link {
   display: none;
 }
 .mgi_nav.-openToggle .mgi_searchbar {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  transition-property: all;
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: linear;
+}
+@media (min-width: 1335px) {
+
+  .mgi_nav.-openToggle .mgi_searchbar {
+    position: absolute;
+  }
+
+  .mgi_nav.-openToggle .mgi_searchbar {
+    top: 0px;
+  }
+
+  .mgi_nav.-openToggle .mgi_searchbar {
+    left: 0px;
+  }
+
+  .mgi_nav.-openToggle .mgi_searchbar {
+    --tw-bg-opacity: 0;
+  }
 }
 .mgi_nav.-openToggle .mgi_nav__logo, .mgi_nav.-openToggle .mgi_nav__menu, .mgi_nav.-openToggle .mgi_nav__function__button, .mgi_nav.-openToggle .mgi_nav__toggle {
   display: none;
@@ -970,22 +998,34 @@ a.mgi_nav__menu__list--link {
 }
 .mgi_searchbar .mgi_searchbar__icon {
   display: block;
-  height: 80px;
+  height: 60px;
   padding-left: 15px;
   padding-right: 15px;
-  line-height: 80px;
+  line-height: 60px;
+}
+@media (min-width: 1335px) {
+
+  .mgi_searchbar .mgi_searchbar__icon {
+    height: 80px;
+  }
+
+  .mgi_searchbar .mgi_searchbar__icon {
+    line-height: 80px;
+  }
 }
 .mgi_searchbar form {
   flex-grow: 1;
 }
 .mgi_searchbar input{
         font-family: "Source Sans Pro", sans-serif;
-        height: 80px;
+        height: 60px;
         width: 100%;
         border-style: none;
         --tw-bg-opacity: 0;
         padding-top: 0.375rem;
         padding-bottom: 0.375rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 400;
@@ -1007,6 +1047,15 @@ a.mgi_nav__menu__list--link {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(165 164 164 / var(--tw-text-opacity));
+}
+@media (min-width: 1335px) {
+
+  .mgi_searchbar input {
+    height: 80px;
+  }
+}
+header.-fixtop .mgi_nav.-openToggle .mgi_searchbar {
+  --tw-bg-opacity: 0;
 }
 header.-fixtop .mgi_searchbar input, header.-fixtop .mgi_searchbar .mgi_searchbar__icon {
   height: 65px;
@@ -1722,6 +1771,8 @@ header.-fixtop .mgi_nav__toggle {
 .mgi_device__group:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .mgi_iframe {
   position: absolute;
