@@ -393,6 +393,7 @@ Ensure the default browser behavior of the `hidden` attribute.
         color: rgb(67 73 85 / var(--tw-text-opacity));
     }
     a {
+  word-break: break-all;
   transition-duration: 300ms;
 }
     a:hover {
@@ -1331,6 +1332,7 @@ footer h5 {
   flex-direction: row;
   -moz-column-gap: 25px;
        column-gap: 25px;
+  word-break: break-all;
   padding-bottom: 10px;
 }
 .mgi_banner__item__content__title {

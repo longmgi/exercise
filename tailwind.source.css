@@ -11,7 +11,7 @@
         @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden scroll-smooth;
     }
     a{
-        @apply hover:no-underline hover:text-primary duration-300;
+        @apply hover:no-underline hover:text-primary duration-300 break-all;
     }
     h1,h2,h3,h4,h5,h6{
         font-family: "Poppins", sans-serif;
@@ -331,7 +331,7 @@
         @apply bg-primary py-1.5 px-3.5;
     }
     .mgi_contact{
-        @apply flex flex-row pb-[10px] gap-x-[25px];
+        @apply flex flex-row pb-[10px] gap-x-[25px] break-all;
     }
     .mgi_banner__item__content__title{
         @apply text-5xl leading-[48px] desktop:text-[98px] desktop:leading-[98px] text-[#fff] font-black;

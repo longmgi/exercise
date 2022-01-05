@@ -51,7 +51,7 @@ function goTop(duration) {
     window.requestAnimationFrame(step);
 }
 // Hero slider
-window.addEventListener("load", function(){
+
     const slide = document.querySelector(".mgi_banner__slides.-full");
     const viewport = document.querySelector(".mgi_banner__slides__wrap");
     const slideItems = document.querySelectorAll(".mgi_banner__slides__item");
@@ -63,47 +63,55 @@ window.addEventListener("load", function(){
     var slidewidth = slideItems[0].offsetWidth;
     var slidelength = slideItems.length;
     var slideArrays = [...dots];
-    nextbtn.addEventListener("click", function(){
+    function moveSlide(direction) {
+        handleClickslide(direction);
         
-        if(posX >= slidelength -1)
-        {
-            posX = 0;
-        }else{
-            posX++;
-        }
-        handleClickslide();
-    })
-    prevbtn.addEventListener("click", function(){
-        
-        if(posX <= 0)
-        {
-            posX = slidelength -1;
-        }
-        else{
-            posX--;
-        }
-        handleClickslide();
-    })
+    }
     // dots controls
     slideArrays.forEach((item) => item.addEventListener("click",function(e){
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" -active", "");
         }
         e.target.classList.add("-active")
-        const index = parseInt(e.target.dataset.index);
-        slideIndex = index;
-        posX = -1 * slideIndex * slidewidth;
-        viewport.style = `transform: translateX(${posX}px)`;
+        const posX = parseInt(e.target.dataset.index);
+        viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
     })
     );
-    function handleClickslide(){
-        viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
+    function handleClickslide(direction){
+        console.log('first',posX);
+        if(direction == 1){
+            if(posX >= slidelength -1)
+            {
+                posX = 0;
+            }
+            else{
+                posX+=1;
+            }
+            console.log(posX);
+            viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
+        }
+        else if(direction == -1)
+        {
+            if(posX <= 0)
+            {
+                posX = slidelength -1;
+            }
+            else
+            {
+                posX--;
+            }
+            console.log(posX);
+            viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
+        }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" -active", "");
         }
         dots[posX].classList.add("-active");
+        return posX;
     }
-})
+    setInterval(function(){
+        handleClickslide(1);
+    }, 9000);
 // var slides = document.getElementsByClassName("mgi_banner__slides__item");
 // var slideIndex = 1;
 // showSlides(slideIndex);
