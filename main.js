@@ -89,7 +89,6 @@ function goTop(duration) {
     })
     );
     function handleClickslide(direction){
-        console.log('first',posX);
         if(direction == 1){
             if(posX >= slidelength -1)
             {
@@ -98,7 +97,6 @@ function goTop(duration) {
             else{
                 posX+=1;
             }
-            console.log(posX);
             viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         }
         else if(direction == -1)
@@ -111,7 +109,6 @@ function goTop(duration) {
             {
                 posX--;
             }
-            console.log(posX);
             viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         }
         for (i = 0; i < dots.length; i++) {
@@ -196,8 +193,8 @@ document.addEventListener('click', function(event) {
     var checkModal = modal.classList.contains("-movedown");
     var isClickInsideModal = modalwrap.contains(event.target);
     var isClickbtnModel = toggleModalbtn.contains(event.target);
+    console.log(isClickbtnModel);
     if(checkModal && !isClickInsideModal && !isClickbtnModel) {
-        console.log("co click");
         modal.classList.remove('-movedown');
     }
 });
