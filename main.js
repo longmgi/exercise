@@ -80,6 +80,7 @@ function goTop(duration) {
         e.target.classList.add("-active")
         const posX = parseInt(e.target.dataset.index);
         viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
+        clearInterval(loopSlide);
         setTimeout(function(){
             setInterval(function(){
                 handleClickslide(1);
