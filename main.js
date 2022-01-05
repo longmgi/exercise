@@ -107,6 +107,9 @@ window.addEventListener("load", function(){
         }
         dots[slideIndex].classList.add("-active");
     }
+    setInterval(function(){
+        handleClickslide(1);
+        }, 4000);
 })
 // var slides = document.getElementsByClassName("mgi_banner__slides__item");
 // var slideIndex = 1;
