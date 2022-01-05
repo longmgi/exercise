@@ -65,7 +65,12 @@ function goTop(duration) {
     var slideArrays = [...dots];
     function moveSlide(direction) {
         handleClickslide(direction);
-        
+        clearInterval(loopSlide);
+        setTimeout(function(){
+            setInterval(function(){
+                handleClickslide(1);
+            }, 6000);
+        }, 3000);
     }
     // dots controls
     slideArrays.forEach((item) => item.addEventListener("click",function(e){
@@ -109,9 +114,9 @@ function goTop(duration) {
         dots[posX].classList.add("-active");
         return posX;
     }
-    setInterval(function(){
+    var loopSlide = setInterval(function(){
         handleClickslide(1);
-    }, 9000);
+    }, 6000);
 // var slides = document.getElementsByClassName("mgi_banner__slides__item");
 // var slideIndex = 1;
 // showSlides(slideIndex);
