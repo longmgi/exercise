@@ -64,11 +64,27 @@ window.addEventListener("load", function(){
     var slidelength = slideItems.length;
     var slideArrays = [...dots];
     nextbtn.addEventListener("click", function(){
-        handleClickslide(1);
+        
+        if(posX >= slidelength -1)
+        {
+            posX = 0;
+        }else{
+            posX++;
+        }
+        handleClickslide();
     })
     prevbtn.addEventListener("click", function(){
-        handleClickslide(-1);
+        
+        if(posX <= 0)
+        {
+            posX = slidelength -1;
+        }
+        else{
+            posX--;
+        }
+        handleClickslide();
     })
+    // dots controls
     slideArrays.forEach((item) => item.addEventListener("click",function(e){
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" -active", "");
@@ -80,36 +96,13 @@ window.addEventListener("load", function(){
         viewport.style = `transform: translateX(${posX}px)`;
     })
     );
-    function handleClickslide(direction){
-        if(direction === 1){
-            if(slideIndex >= slidelength -1)
-            {
-                slideIndex = slidelength -1;
-                return
-            }
-            posX -= slidewidth;
-            viewport.style = `transform: translateX(${posX}px)`;
-            slideIndex++;
-        }
-        else if (direction === -1)
-        {
-            if(slideIndex <= 0)
-            {
-                slideIndex = 0;
-                return
-            }
-            posX += slidewidth;
-            viewport.style = `transform: translateX(${posX}px)`;
-            slideIndex--;
-        }
+    function handleClickslide(){
+        viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" -active", "");
         }
-        dots[slideIndex].classList.add("-active");
+        dots[posX].classList.add("-active");
     }
-    setInterval(function(){
-        handleClickslide(1);
-        }, 4000);
 })
 // var slides = document.getElementsByClassName("mgi_banner__slides__item");
 // var slideIndex = 1;

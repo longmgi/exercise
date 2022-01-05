@@ -344,7 +344,7 @@
         @apply overflow-hidden;
     }
     .mgi_banner__slides.-full .mgi_banner__slides__wrap{
-        @apply w-fit flex flex-row flex-nowrap transition-all duration-[3s] ease-in-out;
+        @apply w-fit flex flex-row flex-nowrap transition-all duration-700 ease-in-out;
     }
     .mgi_banner__slides__item{
         @apply w-screen select-none;
