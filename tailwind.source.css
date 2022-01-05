@@ -305,6 +305,15 @@
     footer h5{
         @apply text-gray-lighter uppercase;
     }
+    .mgi_slides--logo{
+        @apply h-fit overflow-hidden;
+    }
+    .mgi_clientlogo__item{
+        @apply text-center;
+    }
+    .mgi_clientlogo__item img{
+        @apply mx-auto;
+    }
     .mgi_feedback__item__bio{
         @apply text-[15px] text-gray-meta;
     }
