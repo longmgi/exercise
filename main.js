@@ -180,21 +180,24 @@ function toggleShopcart(){
         document.querySelector(".mgi_shopcart").classList.remove("-openToggle");
 }
 //open Modal
+var modal = document.getElementById("mgiModal");
+var modalwrap = document.querySelector(".mgi_popup__wrap");
+var toggleModalbtn = document.getElementById("openModal");
 function toggleModal(){
-    var modal = document.getElementById("mgiModal");
+    
     var checkModal = modal.classList.contains("-movedown");
     if(!checkModal){
         modal.classList.add('-movedown');
     }else
         modal.classList.remove('-movedown');
  }
-// document.addEventListener('click', function(event) {
-//     var modal = document.getElementById("mgiModal");
-//     var checkModal = modal.classList.contains("-movedown");
-//     var isClickModal = modal.contains(event.target);
-//     console.log("check",checkModal);
-//     if(checkModal && !isClickModal) {
-//         console.log("co click roi");
-//         modal.classList.remove('-movedown');
-//     }
-// });
+toggleModalbtn.addEventListener("click", toggleModal);
+document.addEventListener('click', function(event) {
+    var checkModal = modal.classList.contains("-movedown");
+    var isClickInsideModal = modalwrap.contains(event.target);
+    var isClickbtnModel = toggleModalbtn.contains(event.target);
+    if(checkModal && !isClickInsideModal && !isClickbtnModel) {
+        console.log("co click");
+        modal.classList.remove('-movedown');
+    }
+});
