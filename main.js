@@ -179,3 +179,22 @@ function toggleShopcart(){
     else
         document.querySelector(".mgi_shopcart").classList.remove("-openToggle");
 }
+//open Modal
+function toggleModal(){
+    var modal = document.getElementById("mgiModal");
+    var checkModal = modal.classList.contains("-movedown");
+    if(!checkModal){
+        modal.classList.add('-movedown');
+    }else
+        modal.classList.remove('-movedown');
+ }
+// document.addEventListener('click', function(event) {
+//     var modal = document.getElementById("mgiModal");
+//     var checkModal = modal.classList.contains("-movedown");
+//     var isClickModal = modal.contains(event.target);
+//     console.log("check",checkModal);
+//     if(checkModal && !isClickModal) {
+//         console.log("co click roi");
+//         modal.classList.remove('-movedown');
+//     }
+// });

@@ -448,7 +448,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 }
-    input {
+    input, textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -461,25 +461,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.375rem;
   padding-left: 0.75rem;
 }
-    input::-moz-placeholder {
+    input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
 }
-    input:-ms-input-placeholder {
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
 }
-    input::placeholder {
+    input::placeholder, textarea::placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
 }
-    input:focus {
+    input:focus, textarea:focus {
   --tw-border-opacity: 1;
   border-color: rgb(124 124 124 / var(--tw-border-opacity));
   padding-top: 0.375rem;
@@ -1835,6 +1835,112 @@ header.-fixtop .mgi_nav__toggle {
   margin-left: auto;
   margin-right: auto;
 }
+#mgiModal {
+  position: fixed;
+  top: -100%;
+  left: 0px;
+  display: none;
+  height: 100%;
+  width: 100%;
+  --tw-translate-y: 0px;
+  transform: var(--tw-transform);
+  overflow: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  opacity: 0;
+}
+#mgiModal.-movedown {
+  z-index: 50;
+  display: block;
+  --tw-translate-y: 100%;
+  transform: var(--tw-transform);
+  --tw-bg-opacity: 0.5;
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: linear;
+}
+.mgi_popup__wrap {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+@media (min-width: 1335px) {
+
+  .mgi_popup__wrap {
+    width: 600px;
+  }
+}
+.mgi_popup__wrap .mgi_popup__header {
+  padding: 35px;
+  text-align: center;
+}
+.mgi_popup__header h3 {
+  --tw-text-opacity: 1;
+  color: rgb(52 152 219 / var(--tw-text-opacity));
+}
+.mgi_popup__header hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  height: 0.125rem;
+  width: 2.5rem;
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 152 219 / var(--tw-bg-opacity));
+}
+.mgi_popup__wrap .mgi_popup__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.mgi_popup__body input, .mgi_popup__body textarea {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(225 225 225 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(67 73 85 / var(--tw-text-opacity));
+}
+.mgi_popup__body input:focus, .mgi_popup__body textarea:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(52 152 219 / var(--tw-border-opacity));
+}
+.mgi_popup__body .mgi_button {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.mgi_closemodal{
+        font-family: "Source Sans Pro", sans-serif;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 1.25rem;
+        width: 1.25rem;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        --tw-text-opacity: 1;
+        color: rgb(174 173 173 / var(--tw-text-opacity));
+    }
 .\!static {
   position: static !important;
 }

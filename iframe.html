@@ -976,7 +976,7 @@
     <footer>
             <div class="mgi_footer__top mb-[30px]">
                 <div class="mgi_container">
-                    <button class="mgi_button--footer flex flex-row gap-3 items-center">Contact Now <i class="fas fa-envelope"></i></button>
+                    <button class="mgi_button--footer flex flex-row gap-3 items-center" onclick="toggleModal()">Contact Now <i class="fas fa-envelope"></i></button>
                     <div class="mgi_grid--2 desktop:mgi_grid--4 gap-y-[50px] mt-28 pb-[50px]">
                         <div class="mgi_grid__col">
                             <img src="./images/logo-light.png" alt="">
@@ -1046,6 +1046,28 @@
                 
             </div>
     </footer>
+    <div id="mgiModal" class="mgi_popup -contact">
+        <div class="mgi_popup__wrap">
+            <button class="mgi_closemodal" onclick="toggleModal()">x</button>
+            <div class="mgi_popup__header">
+                <h3>Contact us</h3>
+            <hr/>
+                <span>Have any questions? Send us a message.</span>
+            </div>
+            <div class="mgi_popup__body">
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone">
+                <textarea name="Message" id="" cols="30" rows="3" placeholder="Message"></textarea>
+                <div class="mgi_submit">
+                    <button class="mgi_button uppercase" type="submit">
+                        <i class="fa fa-envelope right-pad"></i> SEND MESSAGE
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
     <button id="scrollTop" class="" onclick="goTop(1000)" title="Go to top">
         <i class="fas fa-chevron-up"></i>
     </button>

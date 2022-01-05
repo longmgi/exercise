@@ -32,7 +32,7 @@
     footer{
         @apply bg-neutrals-darkest;
     }
-    input{
+    input, textarea{
         @apply appearance-none py-1.5 pl-3 focus:py-1.5 focus:pl-3 focus:outline-none bg-neutrals-darkest border-[1px] border-primary focus:border-gray-border placeholder:text-sm placeholder:text-gray-lighter;
     }
     input.mgi_search__bar{
@@ -536,5 +536,36 @@
     }
     #mgiSite{
         @apply mx-auto;
+    }
+    #mgiModal{
+        @apply hidden fixed w-full h-full bg-[#000] top-[-100%] overscroll-none overflow-hidden  left-0 translate-y-0 opacity-0;
+    }
+    #mgiModal.-movedown{
+        @apply block translate-y-[100%] opacity-100 bg-opacity-50 transition-all duration-[3s] ease-linear z-50;
+    }
+    .mgi_popup__wrap{
+        @apply w-[90%] desktop:w-[600px] bg-[#fff] mx-auto my-[30px] flex flex-col rounded-md relative;
+    }
+    .mgi_popup__wrap .mgi_popup__header{
+        @apply p-[35px] text-center;
+    }
+    .mgi_popup__header h3{
+        @apply text-primary;
+    }
+    .mgi_popup__header hr{
+        @apply w-10 bg-primary mx-auto h-0.5 border-none mt-[30px] mb-[35px];
+    }
+    .mgi_popup__wrap .mgi_popup__body{
+        @apply flex flex-col gap-y-[15px] px-10 pb-10;
+    }
+    .mgi_popup__body input, .mgi_popup__body textarea{
+        @apply bg-[#fff] py-3 text-neutrals border border-[#e1e1e1] focus:border-primary;
+    }
+    .mgi_popup__body .mgi_button{
+        @apply my-[7px];
+    }
+    .mgi_closemodal{
+        font-family: "Source Sans Pro", sans-serif;
+        @apply absolute top-[15px] right-[15px] text-gray text-xl cursor-pointer w-5 h-5 leading-5 text-center;
     }
 }
