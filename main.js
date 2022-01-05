@@ -51,39 +51,96 @@ function goTop(duration) {
     window.requestAnimationFrame(step);
 }
 // Hero slider
-var slides = document.getElementsByClassName("mgi_banner__slides__item");
-var slideIndex = 1;
-showSlides(slideIndex);
-// Next/previous controls
-function moveSlide(n) {
-    showSlides(slideIndex += n);
-    console.log(slideIndex);
-  }
-  
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-  
-function showSlides(n) {
-    var dots = document.getElementsByClassName("mgi_banner__dots__dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+window.addEventListener("load", function(){
+    const slide = document.querySelector(".mgi_banner__slides.-full");
+    const viewport = document.querySelector(".mgi_banner__slides__wrap");
+    const slideItems = document.querySelectorAll(".mgi_banner__slides__item");
+    const prevbtn = document.querySelector(".mgi_banner__arrow.-left");
+    const nextbtn = document.querySelector(".mgi_banner__arrow.-right");
+    const dots = document.querySelectorAll(".mgi_banner__dots__dot");
+    var posX = 0;
+    var slideIndex = 0;
+    var slidewidth = slideItems[0].offsetWidth;
+    var slidelength = slideItems.length;
+    var slideArrays = [...dots];
+    nextbtn.addEventListener("click", function(){
+        handleClickslide(1);
+    })
+    prevbtn.addEventListener("click", function(){
+        handleClickslide(-1);
+    })
+    slideArrays.forEach((item) => item.addEventListener("click",function(e){
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" -active", "");
+        }
+        e.target.classList.add("-active")
+        const index = parseInt(e.target.dataset.index);
+        slideIndex = index;
+        posX = -1 * slideIndex * slidewidth;
+        viewport.style = `transform: translateX(${posX}px)`;
+    })
+    );
+    function handleClickslide(direction){
+        if(direction === 1){
+            if(slideIndex >= slidelength -1)
+            {
+                slideIndex = slidelength -1;
+                return
+            }
+            posX -= slidewidth;
+            viewport.style = `transform: translateX(${posX}px)`;
+            slideIndex++;
+        }
+        else if (direction === -1)
+        {
+            if(slideIndex <= 0)
+            {
+                slideIndex = 0;
+                return
+            }
+            posX += slidewidth;
+            viewport.style = `transform: translateX(${posX}px)`;
+            slideIndex--;
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" -active", "");
+        }
+        dots[slideIndex].classList.add("-active");
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" -active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " -active";
-}
+})
+// var slides = document.getElementsByClassName("mgi_banner__slides__item");
+// var slideIndex = 1;
+// showSlides(slideIndex);
+// // Next/previous controls
+// function moveSlide(n) {
+//     showSlides(slideIndex += n);
+//     console.log(slideIndex);
+//   }
+  
+// // Thumbnail image controls
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
+  
+// function showSlides(n) {
+//     var dots = document.getElementsByClassName("mgi_banner__dots__dot");
+//     if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     for (var i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" -active", "");
+//     }
+//     slides[slideIndex-1].style.display = "block";
+//     dots[slideIndex-1].className += " -active";
+// }
 
-//auto slide
-setInterval(function(){
-    slideIndex++;
-    showSlides(slideIndex);
-}, 9000);
+// //auto slide
+// setInterval(function(){
+//     slideIndex++;
+//     showSlides(slideIndex);
+// }, 9000);
 
 //Project slide DOING....
 

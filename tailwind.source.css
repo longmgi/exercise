@@ -344,10 +344,10 @@
         @apply overflow-hidden;
     }
     .mgi_banner__slides.-full .mgi_banner__slides__wrap{
-        @apply w-max flex flex-row flex-nowrap;
+        @apply w-fit flex flex-row flex-nowrap transition-all duration-[3s] ease-in-out;
     }
     .mgi_banner__slides__item{
-        @apply w-screen hidden;
+        @apply w-screen select-none;
         animation: moveright 2s;
     }
     /* .mgi_banner__slides__item.-moveright{
@@ -393,6 +393,9 @@
     }
     .mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project{
         @apply grid grid-flow-col mx-[-15px] gap-x-[30px];
+    }
+    .mgi_slides__arrows{
+        @apply hidden;
     }
     .mgi_slides__arrow{
         @apply text-xl w-[50px] h-[50px] text-center leading-[50px] transition-all duration-300 cursor-pointer;
@@ -506,7 +509,7 @@
         @apply hidden;
     }
     #scrollTop.-show{
-        @apply hidden desktop:block fixed right-10 bottom-10 w-8 h-8 opacity-100 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
+        @apply hidden desktop:block select-none fixed right-10 bottom-10 w-8 h-8 opacity-100 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
     }
     /* Choose device */
     .mgi_device{
