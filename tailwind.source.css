@@ -258,7 +258,7 @@
     }
     /* social icon */
     .mgi_social.-icons{
-        @apply flex flex-row gap-x-[5px] flex-wrap;
+        @apply flex flex-row gap-[5px] flex-wrap;
     }
     .mgi_social.-icons li i{
         @apply w-[35px] h-[35px] text-sm leading-[35px] text-center rounded-full border border-gray-lighter hover:text-[#fff];

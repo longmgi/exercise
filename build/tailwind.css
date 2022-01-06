@@ -1207,8 +1207,7 @@ header.-fixtop #btnInfome i {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  gap: 5px;
 }
 .mgi_social.-icons li i {
   height: 35px;
