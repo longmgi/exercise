@@ -547,13 +547,16 @@
         @apply mx-auto;
     }
     #mgiModal{
-        @apply hidden fixed w-full h-full bg-[#000] top-[-100%] overscroll-none overflow-hidden  left-0 translate-y-0 opacity-0;
+        @apply opacity-0 invisible fixed w-full h-full bg-[#000] top-0 overscroll-none overflow-hidden left-0;
     }
     #mgiModal.-movedown{
-        @apply block translate-y-[100%] opacity-100 bg-opacity-50 transition-all duration-[3s] ease-linear z-50;
+        @apply block visible opacity-100 bg-opacity-50 z-50;
     }
     .mgi_popup__wrap{
-        @apply w-[90%] desktop:w-[600px] bg-[#fff] mx-auto my-[30px] flex flex-col rounded-md relative;
+        @apply w-[90%] h-0 desktop:w-[600px] bg-[#fff] mx-auto my-[30px] flex flex-col rounded-md relative -translate-y-full transition-all duration-300 ease-in z-50;
+    }
+    #mgiModal.-movedown .mgi_popup__wrap{
+        @apply h-fit translate-y-4 transition-transform duration-300 ease-out z-50;
     }
     .mgi_popup__wrap .mgi_popup__header{
         @apply p-[35px] text-center;

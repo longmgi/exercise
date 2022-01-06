@@ -1843,14 +1843,12 @@ header.-fixtop .mgi_nav__toggle {
   margin-right: auto;
 }
 #mgiModal {
+  visibility: hidden;
   position: fixed;
-  top: -100%;
+  top: 0px;
   left: 0px;
-  display: none;
   height: 100%;
   width: 100%;
-  --tw-translate-y: 0px;
-  transform: var(--tw-transform);
   overflow: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
@@ -1859,34 +1857,48 @@ header.-fixtop .mgi_nav__toggle {
   opacity: 0;
 }
 #mgiModal.-movedown {
+  visibility: visible;
   z-index: 50;
   display: block;
-  --tw-translate-y: 100%;
-  transform: var(--tw-transform);
   --tw-bg-opacity: 0.5;
   opacity: 1;
-  transition-property: all;
-  transition-duration: 3s;
-  transition-timing-function: linear;
 }
 .mgi_popup__wrap {
   position: relative;
+  z-index: 50;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
+  height: 0px;
   width: 90%;
+  --tw-translate-y: -100%;
+  transform: var(--tw-transform);
   flex-direction: column;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 @media (min-width: 1335px) {
 
   .mgi_popup__wrap {
     width: 600px;
   }
+}
+#mgiModal.-movedown .mgi_popup__wrap {
+  z-index: 50;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  --tw-translate-y: 1rem;
+  transform: var(--tw-transform);
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 .mgi_popup__wrap .mgi_popup__header {
   padding: 35px;
