@@ -718,7 +718,7 @@
         @apply block visible opacity-100 bg-opacity-50 z-50;
     }
     .mgi_popup__wrap{
-        @apply w-auto max-h-0 tablet:w-[600px] bg-[#fff] mx-2.5 desktop:mx-auto desktop:my-[30px] flex flex-col rounded-md relative -translate-y-full transition-all duration-300 ease-in z-50;
+        @apply w-auto max-h-0 tablet:w-[600px] bg-[#fff] mx-2.5 tablet:mx-auto desktop:my-[30px] flex flex-col rounded-md relative -translate-y-full transition-all duration-300 ease-in z-50;
     }
     #mgiModal.-movedown .mgi_popup__wrap{
         @apply max-h-fit translate-y-4 transition-transform duration-300 ease-out z-50;
