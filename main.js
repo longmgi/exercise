@@ -197,7 +197,41 @@ function goTop(duration) {
         dots[posX].classList.add("-active");
         return posX;
     }
-    
+// Touch function
+viewport.addEventListener('touchstart', handleTouchStart, false);        
+viewport.addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;                                                        
+var yDown = null;                                                        
+
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* left swipe */ 
+            handleClickslide(1);
+        } else {
+            handleClickslide(-1);
+        }                       
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
+
 // var slides = document.getElementsByClassName("mgi_banner__slides__item");
 // var slideIndex = 1;
 // showSlides(slideIndex);
