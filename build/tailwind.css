@@ -393,7 +393,7 @@ Ensure the default browser behavior of the `hidden` attribute.
         color: rgb(67 73 85 / var(--tw-text-opacity));
     }
     a {
-  word-break: break-all;
+  overflow-wrap: break-word;
   transition-duration: 300ms;
 }
     a:hover {
@@ -506,6 +506,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     input.mgi_search__bar::placeholder {
   color: rgb(23 23 23 / var(--tw-text-opacity));
   --tw-text-opacity: 0.6;
+}
+    section {
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -1077,9 +1082,7 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
   top: 0px;
   right: 0px;
   z-index: 100;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
   width: 370px;
   --tw-translate-x: 100%;
   transform: var(--tw-transform);
@@ -1161,6 +1164,7 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
 }
 .mgi_rightsidebar__widget .mgi_title {
   display: block;
+  overflow-wrap: break-word;
   font-weight: 500;
   line-height: 25px;
         font-family: "Source Sans Pro", sans-serif;
@@ -1984,20 +1988,13 @@ header.-fixtop .mgi_nav__toggle {
         to {transform: translateX(0)}
     }
 /* Scroll top */
-#scrolltop {
-  display: none;
-}
-#scrollTop.-show {
+#scrollTop {
   position: fixed;
   right: 2.5rem;
   bottom: 2.5rem;
   display: none;
   height: 2rem;
   width: 2rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
@@ -2006,13 +2003,21 @@ header.-fixtop .mgi_nav__toggle {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
-  opacity: 1;
+  opacity: 0;
 }
-#scrollTop.-show:hover {
+#scrollTop:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
+}
+#scrollTop.-show {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 1;
 }
 @media (min-width: 1335px) {
 
@@ -2072,6 +2077,10 @@ header.-fixtop .mgi_nav__toggle {
   display: block;
   min-width: 120px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
@@ -2369,6 +2378,9 @@ header.-fixtop .mgi_nav__toggle {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(52 152 219 / var(--tw-bg-opacity));
+}
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
 }
 .bg-cover {
   background-size: cover;

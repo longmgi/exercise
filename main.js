@@ -1,13 +1,13 @@
 // Scroll event
+var btnGoTop = document.querySelector("#scrollTop");
 window.addEventListener('scroll', function() {
     var positionX = window.pageYOffset;
-    
     if(positionX >= 80){
         document.querySelector("header").classList.add("-fixtop");
-        document.querySelector("#scrollTop").classList.add("-show");
+        btnGoTop.classList.add("-show");
     }else{
         document.querySelector("header").classList.remove("-fixtop");
-        document.querySelector("#scrollTop").classList.remove("-show");
+        btnGoTop.classList.remove("-show");
     }
 });
 // Toggle button
@@ -17,8 +17,10 @@ function toggleNav(){
     var checkMenu = nav.classList.contains("-openmenu");
     if(!checkMenu){
         nav.classList.add("-openmenu");
+        
     }else{
         nav.classList.remove("-openmenu");
+        
     }
 }
 toggleBtn.addEventListener("click", toggleNav); 

@@ -11,7 +11,7 @@
         @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden scroll-smooth;
     }
     a{
-        @apply hover:no-underline hover:text-primary duration-300 break-all;
+        @apply hover:no-underline hover:text-primary duration-300 break-words;
     }
     h1,h2,h3,h4,h5,h6{
         font-family: "Poppins", sans-serif;
@@ -37,6 +37,9 @@
     }
     input.mgi_search__bar{
         @apply bg-gray-lightest w-full h-8 rounded-full placeholder:text-neutrals-darkest placeholder:text-opacity-60;
+    }
+    section{
+        @apply bg-[#fff] relative;
     }
 }
 @layer components{
@@ -195,7 +198,7 @@
     }
     /* infome sidebar */
     #infoMe{
-        @apply fixed top-0 right-0 w-[370px] h-max z-[100] translate-x-full overflow-y-auto opacity-0 transition-all duration-300 ease-linear;
+        @apply fixed top-0 right-0 w-[370px] h-full z-[100] translate-x-full overflow-y-auto opacity-0 transition-all duration-300 ease-linear;
     }
     #infoMe.-open{
         @apply translate-x-0 opacity-100;
@@ -238,7 +241,7 @@
         @apply pl-2;
     }
     .mgi_rightsidebar__widget .mgi_title{
-        @apply font-medium block leading-[25px];
+        @apply font-medium block leading-[25px] break-words;
         font-family: "Source Sans Pro", sans-serif;
     }
     .mgi_rightsidebar__widget .mgi_metadate{
@@ -672,11 +675,12 @@
         to {transform: translateX(0)}
     }
     /* Scroll top */
-    #scrolltop{
-        @apply hidden;
+    #scrollTop{
+        @apply hidden opacity-0 fixed right-10 bottom-10 w-8 h-8 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
     }
+    
     #scrollTop.-show{
-        @apply hidden desktop:block select-none fixed right-10 bottom-10 w-8 h-8 opacity-100 rounded-full bg-[#444444] text-gray-lightest text-xs text-center leading-8 hover:text-gray-lightest hover:bg-neutrals-darkest;
+        @apply hidden desktop:block select-none opacity-100;
     }
     /* Choose device */
     .mgi_device{
@@ -696,7 +700,7 @@
         @apply bg-primary text-[#fff] font-semibold hover:bg-primary;
     }
     .mgi_device__group{
-        @apply block py-2 px-5 cursor-pointer hover:bg-neutrals-darkest hover:text-[#fff] min-w-[120px] text-center;
+        @apply block py-2 px-5 cursor-pointer hover:bg-neutrals-darkest hover:text-[#fff] min-w-[120px] text-center select-none;
     }
     .mgi_iframe{
         @apply block absolute top-0 desktop:top-9 left-0 right-0 bottom-0;
