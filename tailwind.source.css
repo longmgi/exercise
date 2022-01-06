@@ -43,7 +43,9 @@
     .mgi_container, .mgi_banner__item__content{
         @apply container mx-auto px-[15px];
     }
-    
+    #mgiMain{
+        @apply transition-transform ease-linear duration-300;
+    }
     /* Nav menu */
     .mgi_nav{
         @apply flex text-xs font-semibold uppercase text-[#fff] relative;
@@ -78,17 +80,14 @@
         @apply px-[15px];
     }
     /* NavLeft */
-    #navLeft.-openmenu + main{
-        @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
-    }
-    #navLeft.-openmenu ~ footer{
-        @apply translate-x-[80%] desktop:translate-x-0 transition-all ease-out duration-300;
+    #navLeft.-openmenu ~ #mgiMain{
+        @apply translate-x-[80%] desktop:translate-x-0 h-screen overflow-y-hidden;
     }
     #navLeft{
-        @apply absolute top-0 left-0 w-0 transition-all ease-out duration-300;
+        @apply absolute top-0 -left-full w-0 transition-all ease-linear  opacity-0 duration-300;
     }
     #navLeft.-openmenu{
-        @apply desktop:hidden px-2.5 w-[81%] h-screen bg-neutrals-darker fixed top-0 left-0 z-30 transition-all ease-out duration-300;
+        @apply desktop:hidden px-2.5 w-[81%]  opacity-100 h-screen bg-neutrals-darker fixed top-0 left-0 z-50 ;
     }
     .mgi_navleft__menu{
         @apply text-[13px] text-gray-lightest uppercase mt-1;
@@ -194,6 +193,101 @@
     header.-fixtop .mgi_searchbar .mgi_searchbar__icon{
         @apply hover:text-primary;
     }
+    /* infome sidebar */
+    #infoMe{
+        @apply fixed top-0 right-0 w-[370px] h-max z-[100] translate-x-full overflow-y-auto opacity-0 transition-all duration-300 ease-linear;
+    }
+    #infoMe.-open{
+        @apply translate-x-0 opacity-100;
+    }
+    #infoMe.-open ~ #mgiMain{
+        @apply translate-x-full desktop:translate-x-[-370px] h-screen overflow-y-hidden;
+    }
+    .mgi_rightsidebar{
+        @apply bg-neutrals-darkest text-[#fff] px-[30px] pt-[50px] pb-[40px];
+    }
+    .mgi_nav__function__button__list.-infome{
+        @apply ml-2;
+    }
+    .mgi_rightsidebar__widget{
+        @apply pb-10;
+    }
+    .mgi_rightsidebar__widget h5{
+        @apply font-medium text-[#fff] pb-[15px];
+    }
+    .mgi_rightsidebar__widget.-aboutme{
+        @apply pt-[30px];
+    }
+    .mgi_rightsidebar__widget .mgi_thumb
+    {
+        @apply w-[417px] rounded-md pb-5;
+    }
+    .mgi_rightsidebar__post{
+        @apply flex flex-row;
+    }
+    .mgi_rightsidebar__post:not(:last-child){
+        @apply pb-[25px];
+    }
+    .mgi_rightsidebar__post__thumb{
+        @apply w-[70px] min-h-min flex-shrink-0;
+    }
+    .mgi_rightsidebar__post__img{
+        @apply rounded-full w-[60px] h-[60px];
+    }
+    .mgi_rightsidebar__post__text{
+        @apply pl-2;
+    }
+    .mgi_rightsidebar__widget .mgi_title{
+        @apply font-medium block leading-[25px];
+        font-family: "Source Sans Pro", sans-serif;
+    }
+    .mgi_rightsidebar__widget .mgi_metadate{
+        @apply text-[13px] block;
+    }
+    #btnInfome i{
+        @apply p-2.5 border border-[#fff] border-opacity-20;
+    }
+    header.-fixtop #btnInfome i{
+        @apply border-gray-lighter border-opacity-50;
+    }
+    .mgi_rightsidebar__closebtn i{
+        @apply block w-[35px] h-[35px] leading-[35px] text-center rounded-full bg-primary text-[#fff] text-sm;
+    }
+    /* social icon */
+    .mgi_social.-icons{
+        @apply flex flex-row gap-x-[5px] flex-wrap;
+    }
+    .mgi_social.-icons li i{
+        @apply w-[35px] h-[35px] text-sm leading-[35px] text-center rounded-full border border-gray-lighter hover:text-[#fff];
+    }
+    i.fa-facebook{
+        @apply hover:bg-[#3c599f];
+    }
+    i.fa-twitter{
+        @apply hover:bg-[#32ccfe];
+    }
+    i.fa-linkedin{
+        @apply hover:bg-[#0085ae];
+    }
+    i.fa-pinterest{
+        @apply hover:bg-[#cc2127];
+    }
+    i.fa-google-plus{
+        @apply hover:bg-[#cf3d2e];
+    }
+    i.fa-youtube{
+        @apply hover:bg-[#c52f30];
+    }
+    i.fa-dribbble{
+        @apply hover:bg-[#f46899];
+    }
+    i.fa-flickr{
+        @apply hover:bg-[#ff0084];
+    }
+    i.fa-renren{
+        @apply hover:bg-[#025dac];
+    }
+
     /* Shop cart */
     .mgi_shopcart{
         @apply hidden;
@@ -434,7 +528,7 @@
     }
     /* header fix top */
     header.-fixtop{
-        @apply !fixed !h-[65px] top-0 z-50 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
+        @apply !fixed !h-[65px] top-0 z-30 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
     }
     header.-fixtop .mgi_nav__logo .light{
         @apply hidden;

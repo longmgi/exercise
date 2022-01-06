@@ -30,6 +30,26 @@ document.addEventListener('click', function(event) {
         nav.classList.remove("-openmenu");
     }
 });
+// Toggle info me
+var infome = document.getElementById("infoMe");
+var toggleBtninforme = document.getElementById("btnInfome");
+function toggleInfome(){
+    var checkInfome = infome.classList.contains("-open");
+    if(!checkInfome){
+        infome.classList.add("-open");
+    }else{
+        infome.classList.remove("-open");
+    }
+}
+toggleBtninforme.addEventListener("click", toggleBtninforme); 
+document.addEventListener('click', function(event) {
+    var checkOpenInfome = infome.classList.contains("-open");
+    var isClickInsideInfome = infome.contains(event.target);
+    var isClickbuttonInfome = toggleBtninforme.contains(event.target);
+    if(checkOpenInfome && !isClickInsideInfome && !isClickbuttonInfome) {
+        infome.classList.remove("-open");
+    }
+});
 
 function goTop(duration) {
     // cancel if already on top
@@ -181,12 +201,23 @@ function toggleSearchbar(){
 //Shopcart
 function toggleShopcart(){
     var checkshop = document.querySelector(".mgi_shopcart").classList.contains("-openToggle");
+    var toggleShopBtn = document.getElementById("mgiShopBag");
+    var shopDropdown = document.querySelector(".mgi_shopcart");
     if(!checkshop)
     {
-        document.querySelector(".mgi_shopcart").classList.add("-openToggle");
+        shopDropdown.classList.add("-openToggle");
     }
-    else
-        document.querySelector(".mgi_shopcart").classList.remove("-openToggle");
+    else{
+        shopDropdown.classList.remove("-openToggle");
+    }
+        toggleShopBtn.addEventListener("click", toggleNav); 
+        document.addEventListener('click', function(event) {
+            var isClickInsideShop = shopDropdown.contains(event.target);
+            var isClickbuttonShop = toggleShopBtn.contains(event.target);
+            if(checkshop && !isClickInsideShop && !isClickbuttonShop) {
+                shopDropdown.classList.remove("-openToggle");
+            }
+        });
 }
 //open Modal
 var modal = document.getElementById("mgiModal");
