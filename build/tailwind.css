@@ -1083,7 +1083,7 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
   right: 0px;
   z-index: 100;
   height: 100%;
-  width: 370px;
+  width: 100%;
   --tw-translate-x: 100%;
   transform: var(--tw-transform);
   overflow-y: auto;
@@ -1092,6 +1092,12 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
   transition-duration: 300ms;
   transition-timing-function: linear;
 }
+@media (min-width: 1335px) {
+
+  #infoMe {
+    width: 370px;
+  }
+}
 #infoMe.-open {
   --tw-translate-x: 0px;
   transform: var(--tw-transform);
@@ -1099,7 +1105,7 @@ header.-fixtop .mgi_searchbar .mgi_searchbar__icon:hover {
 }
 #infoMe.-open ~ #mgiMain {
   height: 100vh;
-  --tw-translate-x: 100%;
+  --tw-translate-x: -100%;
   transform: var(--tw-transform);
   overflow-y: hidden;
 }
