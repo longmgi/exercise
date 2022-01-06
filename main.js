@@ -76,6 +76,10 @@ var loopSlide = setInterval(function(){
         }
         e.target.classList.add("-active")
         const posX = parseInt(e.target.dataset.index);
+        for (var i = 0; i < slideItems.length; i++) {
+            slideItems[i].classList.remove("-active");
+        }
+        slideItems[posX].classList.add("-active");
         viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         clearInterval(loopSlide);
     })
