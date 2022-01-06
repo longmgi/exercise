@@ -198,13 +198,13 @@
     }
     /* infome sidebar */
     #infoMe{
-        @apply fixed top-0 right-0 w-full desktop:w-[370px] h-full z-[100] translate-x-full overflow-y-auto opacity-0 transition-all duration-300 ease-linear;
+        @apply fixed top-0 right-0 w-full tablet:w-[370px] h-full z-[100] translate-x-full overflow-y-auto opacity-0 transition-all duration-300 ease-linear;
     }
     #infoMe.-open{
         @apply translate-x-0 opacity-100;
     }
     #infoMe.-open ~ #mgiMain{
-        @apply -translate-x-full desktop:translate-x-[-370px] h-screen overflow-y-hidden;
+        @apply -translate-x-full tablet:translate-x-[-370px] h-screen overflow-y-hidden;
     }
     .mgi_rightsidebar{
         @apply bg-neutrals-darkest text-[#fff] px-[30px] pt-[50px] pb-[40px];
@@ -515,7 +515,7 @@
         @apply mx-auto w-full overflow-hidden;
     }
     .mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project{
-        @apply grid grid-flow-col mx-[-15px] gap-x-[30px];
+        @apply grid grid-flow-col mx-[-15px];
     }
     .mgi_slides__arrows{
         @apply hidden;
@@ -610,13 +610,16 @@
             opacity: 0;
         }
     }
+    .mgi_slides__animation, #projectSlide{
+        @apply w-fit;
+    }
     .mgi_slides__item{
-        @apply snap-always snap-start;
+        @apply snap-always snap-start mr-[30px];
     }
     .mgi_slides__item__thumb{
         @apply pb-5;
     }
-    .mgi_slides__item.-center{
+    .mgi_slides__item.-center, .mgi_project__item.-center{
         @apply text-center;
     }
     .mgi_slides__animation.-feedback{

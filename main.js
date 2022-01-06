@@ -10,6 +10,41 @@ window.addEventListener('scroll', function() {
         btnGoTop.classList.remove("-show");
     }
 });
+//Resize event
+// var parentObj = document.querySelector(".mgi_slides__wrap");
+// var childObj = document.querySelectorAll(".mgi_slides__item");
+// for(var i=0; i<childObj.length; i++)
+//     {
+//         childObj[i].style.width = "360px";
+//     }
+// function displayWindowSize(){
+    
+//     var tempwidth = parentObj.offsetWidth;
+//     if(tempwidth < 1335 && tempwidth >=768)
+//     {
+//         for(var i=0; i<childObj.length; i++)
+//         {
+//             childObj[i].style.width = `${tempwidth / 2}px`;
+//         }
+        
+//     }
+//     else if(tempwidth<768)
+//     {
+//         for(var i=0; i<childObj.length; i++)
+//         {
+//             childObj[i].style.width = `${tempwidth}px`;
+//         }
+//     }
+//     else{
+//         for(var i=0; i<childObj.length; i++)
+//         {
+//         childObj[i].style.width = "360px";
+//         }
+//     }
+    
+// }
+
+//window.addEventListener("resize", displayWindowSize);
 // Toggle button
 var nav = document.getElementById("navLeft");
 var toggleBtn = document.getElementById("btnToggle");
