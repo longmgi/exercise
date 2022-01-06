@@ -2141,13 +2141,11 @@ header.-fixtop .mgi_nav__toggle {
 .mgi_popup__wrap {
   position: relative;
   z-index: 50;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   display: flex;
   max-height: 0px;
-  width: 90%;
+  width: auto;
   --tw-translate-y: -100%;
   transform: var(--tw-transform);
   flex-direction: column;
@@ -2159,6 +2157,16 @@ header.-fixtop .mgi_nav__toggle {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 @media (min-width: 1335px) {
+
+  .mgi_popup__wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mgi_popup__wrap {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
   .mgi_popup__wrap {
     width: 600px;
