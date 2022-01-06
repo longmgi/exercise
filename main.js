@@ -108,9 +108,7 @@ function goTop(duration) {
     window.requestAnimationFrame(step);
 }
 // Hero slider
-var loopSlide = setInterval(function(){
-    handleClickslide(1);
-}, 6000);
+
     const slide = document.querySelector(".mgi_banner__slides.-full");
     const viewport = document.querySelector(".mgi_banner__slides__wrap");
     const slideItems = document.querySelectorAll(".mgi_banner__slides__item");
@@ -120,6 +118,17 @@ var loopSlide = setInterval(function(){
     var posX = 0;
     var slideIndex = 0;
     var slidewidth = slideItems[0].offsetWidth;
+    console.log(slidewidth);
+    function calcWidth(){
+        slidewidth = slideItems[0].offsetWidth;
+        console.log("resize",slidewidth);
+        return slidewidth;
+        
+    }
+    window.addEventListener("resize", calcWidth);
+    var loopSlide = setInterval(function(){
+        handleClickslide(1);
+    }, 6000);
     var slidelength = slideItems.length;
     var slideArrays = [...dots];
     function moveSlide(direction) {
@@ -273,7 +282,6 @@ document.addEventListener('click', function(event) {
     var checkModal = modal.classList.contains("-movedown");
     var isClickInsideModal = modalwrap.contains(event.target);
     var isClickbtnModel = toggleModalbtn.contains(event.target);
-    console.log(isClickbtnModel);
     if(checkModal && !isClickInsideModal && !isClickbtnModel) {
         modal.classList.remove('-movedown');
     }
