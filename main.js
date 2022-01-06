@@ -80,6 +80,7 @@ var loopSlide = setInterval(function(){
         clearInterval(loopSlide);
     })
     );
+    // function run
     function handleClickslide(direction){
         if(direction == 1){
             if(posX >= slidelength -1)
@@ -103,6 +104,11 @@ var loopSlide = setInterval(function(){
             }
             viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         }
+        
+        for (var i = 0; i < slideItems.length; i++) {
+            slideItems[i].classList.remove("-active");
+        }
+        slideItems[posX].classList.add("-active");
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" -active", "");
         }
