@@ -87,24 +87,36 @@ var loopSlide = setInterval(function(){
     // function run
     function handleClickslide(direction){
         if(direction == 1){
+            for (var i = 0; i < slideItems.length; i++) {
+                slideItems[i].classList.remove("-moveleft");
+                slideItems[i].classList.remove("-moveright");
+            }
             if(posX >= slidelength -1)
             {
                 posX = 0;
+                slideItems[slidelength-1].classList.add("-moveright");
             }
             else{
                 posX+=1;
+                slideItems[posX-1].classList.add("-moveright");
             }
             viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         }
         else if(direction == -1)
         {
+            for (var i = 0; i < slideItems.length; i++) {
+                slideItems[i].classList.remove("-moveleft");
+                slideItems[i].classList.remove("-moveright");
+            }
             if(posX <= 0)
             {
+                slideItems[0].classList.add("-moveleft");
                 posX = slidelength -1;
             }
             else
             {
                 posX--;
+                slideItems[posX+1].classList.add("-moveleft");
             }
             viewport.style = `transform: translateX(${-1*posX*slidewidth}px)`;
         }

@@ -1374,9 +1374,9 @@ footer h5 {
     display: inline-block;
   }
 }
-/* 
+/*     
     .mgi_banner__item__content .mgi_button{
-        @apply transition-transform duration-300 ease-in;
+        @apply opacity-0;
     } */
 .mgi_banner__slides__item.-active
     .mgi_banner__item__content__title{
@@ -1390,8 +1390,8 @@ footer h5 {
     }
 .mgi_banner__slides__item.-active
     .mgi_banner__item__content .mgi_button{
-        -webkit-animation: slidetobottom 1s ease-in-out;
-                animation: slidetobottom 1s ease-in-out;
+        -webkit-animation: slidetobottom 0.5s ease-in-out;
+                animation: slidetobottom 0.5s ease-in-out;
     }
 /* Slide */
 .mgi_banner__slides.-full {
@@ -1411,13 +1411,13 @@ footer h5 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-        /* animation: moveright 2s; */
+        /* animation: moveright 1.5s ease-in-out; */
 }
 /* .mgi_banner__slides__item.-moveright{
-        animation: moveright 2s;
+        animation: slideoutright 1s ease-in-out ;
     }
     .mgi_banner__slides__item.-moveleft{
-        animation: moveleft 2s;
+        animation: slideoutleft 1s ease-in-out ;
     } */
 .mgi_banner__dots {
   position: absolute;
@@ -1665,6 +1665,42 @@ header.-fixtop .mgi_nav__toggle {
         100% {
             transform: translateY(0);
             opacity: 1;
+        }
+    }
+@-webkit-keyframes slideoutright{
+        0%{
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-1000%);
+            opacity: 0;
+        }
+    }
+@keyframes slideoutright{
+        0%{
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-1000%);
+            opacity: 0;
+        }
+    }
+@-webkit-keyframes slideoutleft{
+        0%{
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(1000%);
+            opacity: 0;
+        }
+    }
+@keyframes slideoutleft{
+        0%{
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(1000%);
+            opacity: 0;
         }
     }
 /* .mgi_slide__item{
