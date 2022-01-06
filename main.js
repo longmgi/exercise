@@ -223,8 +223,10 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             /* left swipe */ 
             handleClickslide(1);
+            clearInterval(loopSlide);
         } else {
             handleClickslide(-1);
+            clearInterval(loopSlide);
         }                       
     }
     /* reset values */
