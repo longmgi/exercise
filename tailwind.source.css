@@ -610,9 +610,9 @@
             opacity: 0;
         }
     }
-    /* .mgi_slide__item{
+    .mgi_slides__item{
         @apply snap-always snap-start;
-    } */
+    }
     .mgi_slides__item__thumb{
         @apply pb-5;
     }
@@ -647,13 +647,13 @@
             margin-left: 0px;
         }
         25% {
-            margin-left: -390px;
+            margin-left: -33%;
         }
         50% {
-            margin-left: -780px;
+            margin-left: -66%;
         }
         85% {
-            margin-left: -1170px;
+            margin-left: -100%;
         }
         100% {
             margin-left: 0px;
