@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 @layer base{
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Source Sans Pro", sans-serif;
+        border: 0;
+        box-sizing: border-box;
+    }
     html{
         @apply scroll-smooth;
     }
     body{
-        font-family: "Source Sans Pro", sans-serif;
         @apply text-base leading-7 font-normal text-neutrals overflow-x-hidden scroll-smooth;
     }
     a{
