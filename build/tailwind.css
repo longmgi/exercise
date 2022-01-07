@@ -1337,39 +1337,39 @@ header.-fixtop #btnInfome i {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-i.fa-facebook:hover {
+.mgi_social i.fa-facebook:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(60 89 159 / var(--tw-bg-opacity));
 }
-i.fa-twitter:hover {
+.mgi_social i.fa-twitter:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(50 204 254 / var(--tw-bg-opacity));
 }
-i.fa-linkedin:hover {
+.mgi_social i.fa-linkedin:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 133 174 / var(--tw-bg-opacity));
 }
-i.fa-pinterest:hover {
+.mgi_social i.fa-pinterest:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(204 33 39 / var(--tw-bg-opacity));
 }
-i.fa-google-plus:hover {
+.mgi_social i.fa-google-plus:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(207 61 46 / var(--tw-bg-opacity));
 }
-i.fa-youtube:hover {
+.mgi_social i.fa-youtube:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(197 47 48 / var(--tw-bg-opacity));
 }
-i.fa-dribbble:hover {
+.mgi_social i.fa-dribbble:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(244 104 153 / var(--tw-bg-opacity));
 }
-i.fa-flickr:hover {
+.mgi_social i.fa-flickr:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 132 / var(--tw-bg-opacity));
 }
-i.fa-renren:hover {
+.mgi_social i.fa-renren:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 93 172 / var(--tw-bg-opacity));
 }

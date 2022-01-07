@@ -295,31 +295,31 @@
     .mgi_social.-icons li i{
         @apply w-[35px] h-[35px] text-sm leading-[35px] text-center rounded-full border border-gray-lighter hover:text-[#fff];
     }
-    i.fa-facebook{
+    .mgi_social i.fa-facebook{
         @apply hover:bg-[#3c599f];
     }
-    i.fa-twitter{
+    .mgi_social i.fa-twitter{
         @apply hover:bg-[#32ccfe];
     }
-    i.fa-linkedin{
+    .mgi_social i.fa-linkedin{
         @apply hover:bg-[#0085ae];
     }
-    i.fa-pinterest{
+    .mgi_social i.fa-pinterest{
         @apply hover:bg-[#cc2127];
     }
-    i.fa-google-plus{
+    .mgi_social i.fa-google-plus{
         @apply hover:bg-[#cf3d2e];
     }
-    i.fa-youtube{
+    .mgi_social i.fa-youtube{
         @apply hover:bg-[#c52f30];
     }
-    i.fa-dribbble{
+    .mgi_social i.fa-dribbble{
         @apply hover:bg-[#f46899];
     }
-    i.fa-flickr{
+    .mgi_social i.fa-flickr{
         @apply hover:bg-[#ff0084];
     }
-    i.fa-renren{
+    .mgi_social i.fa-renren{
         @apply hover:bg-[#025dac];
     }
 
