@@ -14,10 +14,9 @@ window.addEventListener('scroll', function() {
 var countClassmenu = document.querySelectorAll(".mgi_toid");
 var countArrays = [...countClassmenu];
 var classMenu = document.querySelectorAll(".mgi_navleft_class");
-console.log(countClassmenu);
+
 countArrays.forEach((idlink) => idlink.addEventListener("click",function(e){
     const OpenID = e.target.dataset.index;
-    console.log(OpenID);
     for (var i = 0; i < classMenu.length; i++) {
         classMenu[i].classList.remove("-open");
     }
@@ -109,7 +108,6 @@ function goTop(duration) {
     console.log(slidewidth);
     function calcWidth(){
         slidewidth = slideItems[0].offsetWidth;
-        console.log("resize",slidewidth);
         return slidewidth;
         
     }
