@@ -383,7 +383,6 @@ Ensure the default browser behavior of the `hidden` attribute.
         margin: 0;
         padding: 0;
         font-family: "Source Sans Pro", sans-serif;
-        border: 0;
         box-sizing: border-box;
     }
     html {
