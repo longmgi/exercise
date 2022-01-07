@@ -87,23 +87,41 @@
         @apply translate-x-[80%] desktop:translate-x-0 h-screen overflow-y-hidden;
     }
     #navLeft{
-        @apply absolute top-0 -left-full w-0 transition-all ease-linear  opacity-0 duration-300;
+        @apply fixed top-0 -left-full w-0 bg-neutrals-darker transition-all ease-linear opacity-0 duration-300;
     }
     #navLeft.-openmenu{
-        @apply desktop:hidden px-2.5 w-[81%]  opacity-100 h-screen bg-neutrals-darker fixed top-0 left-0 z-50 ;
+        @apply desktop:hidden px-2.5 w-[81%] opacity-100 h-screen fixed top-0 left-0 z-50 ;
+    }
+    .mgi_navleft{
+        @apply relative;
     }
     .mgi_navleft__menu{
         @apply text-[13px] text-gray-lightest uppercase mt-1;
     }
     .mgi_navleft__menu .mgi_navleft__menu__list{
-        @apply border-b-[1px] border-neutrals-darkest;
+        @apply border-b-[1px] border-neutrals-darkest flex flex-row items-center justify-between;
     }
-    
+    .mgi_navleft__menu__countchild{
+        @apply border-l-[1px] border-l-neutrals-darkest w-[90px] text-right text-[13px] pr-0.5;
+    }
+    .mgi_navleft__menu__countchild i{
+        @apply pl-3;
+    }
+    .mgi_navleft__menu__list--link, .mgi_navleft__menu__countchild{
+        @apply h-10 leading-10 block;
+    }
     .mgi_navleft__menu__list--link{
-        @apply block h-10 leading-10;
+        @apply w-full;
     }
-    .mgi_navleft__menu__sub{
-        @apply hidden;
+    .mgi_navleft_class{
+        @apply absolute top-0 left-0 w-full bg-neutrals-darker px-5;
+    }
+    .mgi_navleft__goback{
+        @apply absolute top-1 left-0 w-10 h-10 leading-10 text-gray-lightest text-center;
+    }
+    .mgi_animation__blink{
+        @apply bg-[red] text-[9px] py-0.5 px-1 text-[#fff] ml-2.5;
+        animation: pulsespeed 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
     /* dropdown menu  */
     .mgi_nav__menu__dropdown, .mgi_nav__menu__dropdown__submenu__sub2{
@@ -610,6 +628,14 @@
             opacity: 0;
         }
     }
+    @keyframes pulsespeed {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
     .mgi_slides__animation, #projectSlide{
         @apply w-fit;
     }
