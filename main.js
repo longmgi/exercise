@@ -10,41 +10,21 @@ window.addEventListener('scroll', function() {
         btnGoTop.classList.remove("-show");
     }
 });
-//Resize event
-// var parentObj = document.querySelector(".mgi_slides__wrap");
-// var childObj = document.querySelectorAll(".mgi_slides__item");
-// for(var i=0; i<childObj.length; i++)
-//     {
-//         childObj[i].style.width = "360px";
-//     }
-// function displayWindowSize(){
-    
-//     var tempwidth = parentObj.offsetWidth;
-//     if(tempwidth < 1335 && tempwidth >=768)
-//     {
-//         for(var i=0; i<childObj.length; i++)
-//         {
-//             childObj[i].style.width = `${tempwidth / 2}px`;
-//         }
-        
-//     }
-//     else if(tempwidth<768)
-//     {
-//         for(var i=0; i<childObj.length; i++)
-//         {
-//             childObj[i].style.width = `${tempwidth}px`;
-//         }
-//     }
-//     else{
-//         for(var i=0; i<childObj.length; i++)
-//         {
-//         childObj[i].style.width = "360px";
-//         }
-//     }
-    
-// }
+// Slide class Navleft
+var countClassmenu = document.querySelectorAll(".mgi_toid");
+var countArrays = [...countClassmenu];
+var classMenu = document.querySelectorAll(".mgi_navleft_class");
+console.log(countClassmenu);
+countArrays.forEach((idlink) => idlink.addEventListener("click",function(e){
+    const OpenID = e.target.dataset.index;
+    console.log(OpenID);
+    for (var i = 0; i < classMenu.length; i++) {
+        classMenu[i].classList.remove("-open");
+    }
+    document.querySelector(OpenID).classList.add("-open");
+})
+);
 
-//window.addEventListener("resize", displayWindowSize);
 // Toggle button
 var nav = document.getElementById("navLeft");
 var toggleBtn = document.getElementById("btnToggle");
@@ -52,7 +32,10 @@ function toggleNav(){
     var checkMenu = nav.classList.contains("-openmenu");
     if(!checkMenu){
         nav.classList.add("-openmenu");
-        
+        for (var i = 0; i < classMenu.length; i++) {
+            classMenu[i].classList.remove("-open");
+        }
+        document.querySelector("#class-1").classList.add("-open");
     }else{
         nav.classList.remove("-openmenu");
         
@@ -65,8 +48,13 @@ document.addEventListener('click', function(event) {
     var isClickbutton = toggleBtn.contains(event.target);
     if(checkMenu && !isClickInside && !isClickbutton) {
         nav.classList.remove("-openmenu");
+        for (var i = 0; i < classMenu.length; i++) {
+            classMenu[i].classList.remove("-open");
+        }
+        document.querySelector("#class-1").classList.add("-open");
     }
 });
+
 // Toggle info me
 var infome = document.getElementById("infoMe");
 var toggleBtninforme = document.getElementById("btnInfome");
