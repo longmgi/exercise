@@ -323,7 +323,7 @@
         @apply hidden;
     }
     .mgi_shopcart.-openToggle{
-        @apply absolute top-full right-0 bg-neutrals-menu border border-neutrals-darkest flex flex-col min-w-[280px] p-[15px];
+        @apply absolute top-full -mr-16 tablet:mr-0 right-0 bg-neutrals-menu border border-neutrals-darkest flex flex-col min-w-[280px] p-[15px];
     }
     .mgi_shopcart__list{
         @apply flex flex-col pb-2.5 border-b border-b-gray-border;

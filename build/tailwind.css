@@ -1376,6 +1376,7 @@ i.fa-renren:hover {
   position: absolute;
   top: 100%;
   right: 0px;
+  margin-right: -4rem;
   display: flex;
   min-width: 280px;
   flex-direction: column;
@@ -1385,6 +1386,12 @@ i.fa-renren:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
   padding: 15px;
+}
+@media (min-width: 768px) {
+
+  .mgi_shopcart.-openToggle {
+    margin-right: 0px;
+  }
 }
 .mgi_shopcart__list {
   display: flex;
