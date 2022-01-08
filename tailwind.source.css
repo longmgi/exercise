@@ -477,10 +477,6 @@
     .mgi_banner__item__content__description{
         @apply hidden tablet:inline-block text-[#fff] text-lg text-center pb-[30px] leading-[30.6px];
     }
-/*     
-    .mgi_banner__item__content .mgi_button{
-        @apply opacity-0;
-    } */
     .mgi_banner__slides__item.-active
     .mgi_banner__item__content__title{
         animation: slideinleft 1s ease-in-out;

@@ -1672,10 +1672,6 @@ footer h5 {
     display: inline-block;
   }
 }
-/*     
-    .mgi_banner__item__content .mgi_button{
-        @apply opacity-0;
-    } */
 .mgi_banner__slides__item.-active
     .mgi_banner__item__content__title{
         -webkit-animation: slideinleft 1s ease-in-out;
