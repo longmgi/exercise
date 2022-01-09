@@ -539,7 +539,7 @@
         @apply mx-auto w-full overflow-hidden;
     }
     .mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project{
-        @apply grid grid-flow-col;
+        @apply flex flex-row;
     }
     .mgi_slides__arrows{
         @apply hidden;
@@ -584,10 +584,16 @@
     .mgi_slides__item{
         @apply snap-always snap-start mr-[30px] w-[360px];
     }
+    #projectSlide{
+        @apply snap-mandatory;
+    }
+    #projectSlide .mgi_slides__item{
+        @apply w-[262.5px] snap-start snap-always;
+    }
     .mgi_slides__item__thumb{
         @apply pb-5;
     }
-    .mgi_slides__item.-center, .mgi_project__item.-center{
+    .mgi_slides__item.-center, .mgi_project__card.-center{
         @apply text-center;
     }
     .mgi_slides__animation.-feedback{
