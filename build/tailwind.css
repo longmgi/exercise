@@ -2417,8 +2417,8 @@ footer h5 {
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
-.mt-\[52px\] {
-  margin-top: 52px;
+.mt-20 {
+  margin-top: 5rem;
 }
 .block {
   display: block;
