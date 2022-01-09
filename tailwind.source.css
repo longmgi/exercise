@@ -288,6 +288,22 @@
     .mgi_rightsidebar__closebtn i{
         @apply block w-[35px] h-[35px] leading-[35px] text-center rounded-full bg-primary text-[#fff] text-sm;
     }
+    /* header fix top */
+    header.-fixtop{
+        @apply !fixed !h-[65px] top-0 z-30 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
+    }
+    header.-fixtop .mgi_nav__logo .light{
+        @apply hidden;
+    }
+    header.-fixtop .mgi_nav__logo .dark{
+        @apply block;
+    }
+    header.-fixtop a.mgi_nav__menu__list--link{
+        @apply text-neutrals h-[65px] leading-[65px] hover:text-primary;
+    }
+    header.-fixtop .mgi_nav__toggle{
+        @apply text-neutrals-darkest;
+    } 
     /* social icon */
     .mgi_social.-icons{
         @apply flex flex-row gap-[5px] flex-wrap;
@@ -406,25 +422,7 @@
     h5.mgi_hr::after{
         @apply !ml-0;
     }
-    .mgi_card__item__icon{
-        @apply leading-[60px] w-[60px] h-[60px] rounded-full bg-primary text-center mb-[15px];
-    }
     
-    .mgi_card__thumb{
-        @apply pb-5;
-    }
-    .mgi_card__date{
-        @apply text-[13px] text-gray-meta;
-    }
-    .mgi_feedback__item {
-        @apply relative !pl-[60px] before:content-['"'] before:absolute before:top-8 before:left-0 before:text-[85px];
-    }
-    .mgi_feedback__item::before{
-        font-family: "arial", sans-serif;
-    }
-    .mgi_feedback__item p{
-        @apply text-xl font-light leading-7;
-    }
     footer{
         @apply text-gray;
     }
@@ -443,9 +441,7 @@
     .mgi_clientlogo__item img{
         @apply mx-auto;
     }
-    .mgi_feedback__item__bio{
-        @apply text-[15px] text-gray-meta;
-    }
+    
     .mgi_list.-about li{
         @apply flex flex-row pb-1 items-center;
     }
@@ -557,25 +553,33 @@
     .mgi_slides__arrow.-right{
         @apply absolute top-1/2 -right-20 hover:text-primary;
     }
-    /* header fix top */
-    header.-fixtop{
-        @apply !fixed !h-[65px] top-0 z-30 bg-[#fff] drop-shadow-md transition-transform ease-in-out duration-500;
+    .mgi_card__item__icon{
+        @apply leading-[60px] w-[60px] h-[60px] rounded-full bg-primary text-center mb-[15px];
     }
-    header.-fixtop .mgi_nav__logo .light{
-        @apply hidden;
-    }
-    header.-fixtop .mgi_nav__logo .dark{
-        @apply block;
-    }
-    header.-fixtop a.mgi_nav__menu__list--link{
-        @apply text-neutrals h-[65px] leading-[65px] hover:text-primary;
-    }
-    header.-fixtop .mgi_nav__toggle{
-        @apply text-neutrals-darkest;
-    } 
     
+    .mgi_card__thumb{
+        @apply pb-5;
+    }
+    .mgi_card__date{
+        @apply text-[13px] text-gray-meta;
+    }
+    .mgi_feedback__card {
+        @apply relative !pl-[60px] before:content-['"'] before:absolute before:top-8 before:left-0 before:text-[85px];
+    }
+    .mgi_feedback__card::before{
+        font-family: "arial", sans-serif;
+    }
+    .mgi_feedback__card p{
+        @apply text-xl font-light leading-7;
+    }
+    .mgi_feedback__card__bio{
+        @apply text-[15px] text-gray-meta;
+    }
     .mgi_slides__animation, #projectSlide{
         @apply w-fit;
+    }
+    .mgi_feedback .mgi_slides__item{
+        @apply snap-always snap-start mr-10 w-[353.333px];
     }
     .mgi_slides__item{
         @apply snap-always snap-start mr-[30px] w-[360px];
