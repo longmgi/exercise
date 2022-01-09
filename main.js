@@ -108,7 +108,6 @@ function goTop(duration) {
     var posX = 0;
     var slideIndex = 0;
     var slidewidth = slideItems[0].offsetWidth;
-    console.log(slidewidth);
     function calcWidth(){
         slidewidth = slideItems[0].offsetWidth;
         return slidewidth;
@@ -264,22 +263,28 @@ var viewProject = $("#projectSlide");
    var slides = $$("#projectSlide .mgi_slides__item");
    var slidewrap = $(".mgi_slides__wrap");
    var pos = 0;
-var device = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
-  );
- var widthProject;
- if(device>768){
-    widthProject = (1140 - 90)/4;
+ function caclwidthCard(){
+    var device = Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+      );
+    var widthcard = 0;
+    if(device>768){
+        widthcard = (1140 - 90)/4;
+     }
+     else{
+        widthcard = slidewrap.offsetWidth;
+     }
+     return widthcard;
  }
- else{
-    widthProject = slidewrap.offsetWidth;
- }
+ 
+ window.addEventListener("resize", caclwidthCard);
+ var widthcard = caclwidthCard();
  for(var i=0; i< slides.length;i++){
-   slides[i].style.width = `${widthProject}px`;
+   slides[i].style.width = `${widthcard}px`;
  }
  var loopSlideproject = setInterval(function(){
     handleProject(1);
@@ -294,7 +299,7 @@ function handleProject(direct){
         else{
             pos+=1;
         }
-        viewProject.style = `transform: translateX(${-1*pos*(widthProject+30)}px)`;
+        viewProject.style = `transform: translateX(${-1*pos*(widthcard+30)}px)`;
     }
     else if(direct == -1)
     {
@@ -306,7 +311,7 @@ function handleProject(direct){
         {
             pos--;
         }
-        viewProject.style = `transform: translateX(${-1*pos*(widthProject+30)}px)`;
+        viewProject.style = `transform: translateX(${-1*pos*(widthcard+30)}px)`;
     }
     return pos;
 }

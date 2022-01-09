@@ -1941,24 +1941,24 @@ footer h5 {
   text-align: center;
 }
 .mgi_slides__animation.-feedback{
-        -webkit-animation: slide2 20s ease-out infinite 2s backwards;
-                animation: slide2 20s ease-out infinite 2s backwards;
+        -webkit-animation: slide2 24s ease-out infinite 2s backwards;
+                animation: slide2 24s ease-out infinite 2s backwards;
     }
 .mgi_slides__animation.-news{
-        -webkit-animation: slide 20s ease-out infinite 2s backwards;
-                animation: slide 20s ease-out infinite 2s backwards;
+        -webkit-animation: slide 24s ease-out infinite 2s backwards;
+                animation: slide 24s ease-out infinite 2s backwards;
     }
 @-webkit-keyframes slide2{
-        0% {
+        0%, 15% {
             margin-left: 0px;
         }
-        25% {
+        25%,40% {
             margin-left: -393.333px;
         }
-        50% {
+        50%,65% {
             margin-left: -786.666px;
         }
-        85% {
+        85%,95% {
             margin-left: -1179.999px;
         }
         100% {
@@ -1966,16 +1966,16 @@ footer h5 {
         }
     }
 @keyframes slide2{
-        0% {
+        0%, 15% {
             margin-left: 0px;
         }
-        25% {
+        25%,40% {
             margin-left: -393.333px;
         }
-        50% {
+        50%,65% {
             margin-left: -786.666px;
         }
-        85% {
+        85%,95% {
             margin-left: -1179.999px;
         }
         100% {
@@ -1983,16 +1983,16 @@ footer h5 {
         }
     }
 @-webkit-keyframes slide{
-        0%{
+        0%, 15%{
             margin-left: 0px;
         }
-        25% {
+        25%, 40% {
             margin-left: -390px;
         }
-        50% {
+        50%, 65% {
             margin-left: -780px;
         }
-        85% {
+        85%, 95% {
             margin-left: -1170px;
         }
         100%{
@@ -2000,16 +2000,16 @@ footer h5 {
         }
     }
 @keyframes slide{
-        0%{
+        0%, 15%{
             margin-left: 0px;
         }
-        25% {
+        25%, 40% {
             margin-left: -390px;
         }
-        50% {
+        50%, 65% {
             margin-left: -780px;
         }
-        85% {
+        85%, 95% {
             margin-left: -1170px;
         }
         100%{
