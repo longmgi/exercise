@@ -1,3 +1,6 @@
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 // Scroll event
 var btnGoTop = document.querySelector("#scrollTop");
 window.addEventListener('scroll', function() {
@@ -255,6 +258,66 @@ function handleTouchMove(evt) {
 // }, 9000);
 
 //Project slide DOING....
+
+// Project slide run
+var viewProject = $("#projectSlide");
+   var slides = $$("#projectSlide .mgi_slides__item");
+   var slidewrap = $(".mgi_slides__wrap");
+   var pos = 0;
+var device = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+ var widthProject;
+ if(device>768){
+    widthProject = (1140 - 90)/4;
+ }
+ else{
+    widthProject = slidewrap.offsetWidth;
+ }
+ for(var i=0; i< slides.length;i++){
+   slides[i].style.width = `${widthProject}px`;
+ }
+ var loopSlideproject = setInterval(function(){
+    handleProject(1);
+}, 6000);
+function handleProject(direct){
+   
+   if(direct == 1){
+        if(pos >= slides.length -1)
+        {
+            pos = 0;
+        }
+        else{
+            pos+=1;
+        }
+        viewProject.style = `transform: translateX(${-1*pos*(widthProject+30)}px)`;
+    }
+    else if(direct == -1)
+    {
+        if(pos <= 0)
+        {
+            pos = slides.length -1;
+        }
+        else
+        {
+            pos--;
+        }
+        viewProject.style = `transform: translateX(${-1*pos*(widthProject+30)}px)`;
+    }
+    return pos;
+}
+function prevSlides(){
+    handleProject(-1);
+    clearInterval(loopSlideproject);
+}
+function nextSlides(){
+    handleProject(1);
+    clearInterval(loopSlideproject);
+}
 
 //Searchbar
 function toggleSearchbar(){

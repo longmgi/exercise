@@ -541,17 +541,14 @@
     .mgi_slides__wrap .-feedback, .mgi_slides__wrap .-news, .mgi_slides__wrap .-project{
         @apply flex flex-row;
     }
-    .mgi_slides__arrows{
-        @apply hidden;
-    }
     .mgi_slides__arrow{
         @apply text-xl w-[50px] h-[50px] text-center leading-[50px] transition-all duration-300 cursor-pointer;
     }
     .mgi_slides__arrow.-left{
-        @apply absolute top-1/2 -left-20 hover:text-primary;
+        @apply absolute top-1/2 left-0 desktop:-left-20 hover:text-primary;
     }
     .mgi_slides__arrow.-right{
-        @apply absolute top-1/2 -right-20 hover:text-primary;
+        @apply absolute top-1/2 right-0 desktop:-right-20 hover:text-primary;
     }
     .mgi_card__item__icon{
         @apply leading-[60px] w-[60px] h-[60px] rounded-full bg-primary text-center mb-[15px];
@@ -581,15 +578,19 @@
     .mgi_feedback .mgi_slides__item{
         @apply snap-always snap-start mr-10 w-[353.333px];
     }
-    .mgi_slides__item{
+    .-news .mgi_slides__item{
         @apply snap-always snap-start mr-[30px] w-[360px];
     }
     #projectSlide{
         @apply snap-mandatory;
     }
     #projectSlide .mgi_slides__item{
-        @apply w-[262.5px] snap-start snap-always;
+        @apply mr-[30px];
     }
+    .mgi_slides__wrap .-project{
+        @apply transition-transform duration-500 ease-in-out;
+    }
+    /* w-[262.5px]  */
     .mgi_slides__item__thumb{
         @apply pb-5;
     }
