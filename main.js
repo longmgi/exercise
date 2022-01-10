@@ -263,6 +263,7 @@ var viewProject = $("#projectSlide");
    var slides = $$("#projectSlide .mgi_slides__item");
    var slidewrap = $(".mgi_slides__wrap");
    var pos = 0;
+   
  function caclwidthCard(){
     var device = Math.max(
         document.body.scrollWidth,
@@ -286,6 +287,12 @@ var viewProject = $("#projectSlide");
  for(var i=0; i< slides.length;i++){
    slides[i].style.width = `${widthcard}px`;
  }
+ var firstchild = slides[0].cloneNode(true);
+ var secondchild = slides[1].cloneNode(true);
+   var lastchild = slides[slides.length-1].cloneNode(true);
+   viewProject.insertBefore(lastchild, slides[0]);
+   viewProject.appendChild(firstchild);
+   viewProject.appendChild(secondchild);
  var loopSlideproject = setInterval(function(){
     handleProject(1);
 }, 6000);
@@ -318,10 +325,12 @@ function handleProject(direct){
 function prevSlides(){
     handleProject(-1);
     clearInterval(loopSlideproject);
+    console.log(pos);
 }
 function nextSlides(){
     handleProject(1);
     clearInterval(loopSlideproject);
+    console.log(pos);
 }
 
 //Searchbar
