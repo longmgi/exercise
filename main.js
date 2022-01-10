@@ -262,7 +262,7 @@ function handleTouchMove(evt) {
 var viewProject = $("#projectSlide");
    var slides = $$("#projectSlide .mgi_slides__item");
    var slidewrap = $(".mgi_slides__wrap");
-   var pos = 0;
+   var pos = 1;
    
  function caclwidthCard(){
     var device = Math.max(
@@ -296,12 +296,13 @@ var viewProject = $("#projectSlide");
  var loopSlideproject = setInterval(function(){
     handleProject(1);
 }, 6000);
+viewProject.style = `transform: translateX(${-1*pos*(widthcard+30)}px)`;
 function handleProject(direct){
    
    if(direct == 1){
         if(pos >= slides.length -1)
         {
-            pos = 0;
+            pos = 1;
         }
         else{
             pos+=1;
