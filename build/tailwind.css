@@ -1941,12 +1941,12 @@ footer h5 {
   text-align: center;
 }
 .mgi_slides__animation.-feedback{
-        -webkit-animation: slide2 24s ease-out infinite 2s backwards;
-                animation: slide2 24s ease-out infinite 2s backwards;
+        -webkit-animation: slide2 24s ease-out infinite 0.5s backwards;
+                animation: slide2 24s ease-out infinite 0.5s backwards;
     }
 .mgi_slides__animation.-news{
-        -webkit-animation: slide 24s ease-out infinite 2s backwards;
-                animation: slide 24s ease-out infinite 2s backwards;
+        -webkit-animation: slide 24s ease-out infinite 0.5s backwards;
+                animation: slide 24s ease-out infinite 0.5s backwards;
     }
 @-webkit-keyframes slide2{
         0%, 15% {
@@ -1958,7 +1958,7 @@ footer h5 {
         50%,65% {
             margin-left: -786.666px;
         }
-        85%,95% {
+        75%,90% {
             margin-left: -1179.999px;
         }
         100% {
@@ -1975,7 +1975,7 @@ footer h5 {
         50%,65% {
             margin-left: -786.666px;
         }
-        85%,95% {
+        75%,90% {
             margin-left: -1179.999px;
         }
         100% {
@@ -1992,7 +1992,7 @@ footer h5 {
         50%, 65% {
             margin-left: -780px;
         }
-        85%, 95% {
+        75%, 90% {
             margin-left: -1170px;
         }
         100%{
@@ -2009,7 +2009,7 @@ footer h5 {
         50%, 65% {
             margin-left: -780px;
         }
-        85%, 95% {
+        75%, 90% {
             margin-left: -1170px;
         }
         100%{
