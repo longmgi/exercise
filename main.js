@@ -262,7 +262,7 @@ function handleTouchMove(evt) {
 var viewProject = $("#projectSlide");
    var slides = $$("#projectSlide .mgi_slides__item");
    var slidewrap = $(".mgi_slides__wrap");
-   var pos = 0;
+   var pos = 1;
    
  function caclwidthCard(){
     var device = Math.max(
@@ -273,17 +273,22 @@ var viewProject = $("#projectSlide");
         document.documentElement.clientWidth
       );
     var widthcard = 0;
-    if(device>768){
+    if(device>=1335){
         widthcard = (1140 - 90)/4;
+     }
+     else if(device>=768 && device < 1335){
+        widthcard = (slidewrap.offsetWidth-30) / 2;
      }
      else{
         widthcard = slidewrap.offsetWidth;
      }
+     
      return widthcard;
  }
  
  window.addEventListener("resize", caclwidthCard);
  var widthcard = caclwidthCard();
+ console.log(widthcard);
  for(var i=0; i< slides.length;i++){
    slides[i].style.width = `${widthcard}px`;
  }
