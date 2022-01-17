@@ -285,7 +285,6 @@ var viewProject = $("#projectSlide");
      
      return widthcard;
  }
- 
  window.addEventListener("resize", caclwidthCard);
  var widthcard = caclwidthCard();
  console.log(widthcard);
