@@ -557,6 +557,9 @@
     .mgi_card__thumb{
         @apply pb-5;
     }
+    .mgi_card__thumb img{
+        @apply w-full;
+    }
     .mgi_card__date{
         @apply text-[13px] text-gray-meta;
     }
@@ -593,6 +596,9 @@
     /* w-[262.5px]  */
     .mgi_slides__item__thumb{
         @apply pb-5;
+    }
+    .mgi_slides__item__thumb img{
+        @apply w-full;
     }
     .mgi_slides__item.-center, .mgi_project__card.-center{
         @apply text-center;

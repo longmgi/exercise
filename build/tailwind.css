@@ -1877,6 +1877,9 @@ footer h5 {
 .mgi_card__thumb {
   padding-bottom: 1.25rem;
 }
+.mgi_card__thumb img {
+  width: 100%;
+}
 .mgi_card__date {
   font-size: 13px;
   --tw-text-opacity: 1;
@@ -1936,6 +1939,9 @@ footer h5 {
 /* w-[262.5px]  */
 .mgi_slides__item__thumb {
   padding-bottom: 1.25rem;
+}
+.mgi_slides__item__thumb img {
+  width: 100%;
 }
 .mgi_slides__item.-center, .mgi_project__card.-center {
   text-align: center;
